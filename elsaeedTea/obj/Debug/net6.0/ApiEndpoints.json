@@ -1,0 +1,271 @@
+[
+  {
+    "ContainingType": "elsaeedTea.Controllers.TeaController",
+    "Method": "AddTeaProduct",
+    "RelativePath": "api/Tea/AddTeaProduct",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "teaDto",
+        "Type": "elsaeedTea.service.Services.teaProductServices.Dtos.AddNewTeaDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "elsaeedTea.service.Services.teaProductServices.Dtos.TeaDetailsDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "elsaeedTea.Controllers.TeaController",
+    "Method": "DeleteTeaProduct",
+    "RelativePath": "api/Tea/DeleteTeaProduct/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "elsaeedTea.Controllers.TeaController",
+    "Method": "GetAllTeaProducts",
+    "RelativePath": "api/Tea/GetAllTeaProducts",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IReadOnlyList\u00601[[elsaeedTea.service.Services.teaProductServices.Dtos.TeaDetailsDto, elsaeedTea.service, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "elsaeedTea.Controllers.TeaController",
+    "Method": "GetTeaDetailsById",
+    "RelativePath": "api/Tea/GetTeaDetailsById/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "elsaeedTea.service.Services.teaProductServices.Dtos.TeaDetailsDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "elsaeedTea.Controllers.TeaController",
+    "Method": "UpdateTeaProduct",
+    "RelativePath": "api/Tea/UpdateTeaProduct",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "teaDto",
+        "Type": "elsaeedTea.service.Services.teaProductServices.Dtos.AddNewTeaDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "elsaeedTea.service.Services.teaProductServices.Dtos.TeaDetailsDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "elsaeedTea.Controllers.TeaImagesController",
+    "Method": "AddTeaImages",
+    "RelativePath": "api/TeaImages/AddTeaImages",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ProductId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "ImageFile",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "elsaeedTea.service.Services.teaImagesServices.Dtos.GetTeaImages",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "elsaeedTea.Controllers.TeaImagesController",
+    "Method": "DeleteTeaImage",
+    "RelativePath": "api/TeaImages/DeleteTeaImage/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "elsaeedTea.Controllers.TeaImagesController",
+    "Method": "GetAllTeaImages",
+    "RelativePath": "api/TeaImages/GetAllTeaImages",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IReadOnlyList\u00601[[elsaeedTea.service.Services.teaImagesServices.Dtos.GetTeaImages, elsaeedTea.service, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "elsaeedTea.Controllers.TeaImagesController",
+    "Method": "GetTeaImagesById",
+    "RelativePath": "api/TeaImages/GetTeaImagesById/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "elsaeedTea.service.Services.teaImagesServices.Dtos.GetTeaImages",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "elsaeedTea.Controllers.TeaImagesController",
+    "Method": "UpdateTeaImages",
+    "RelativePath": "api/TeaImages/UpdateTeaImages/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "ProductId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "ImageFile",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "elsaeedTea.service.Services.teaImagesServices.Dtos.GetTeaImages",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "elsaeedTea.Controllers.WeatherForecastController",
+    "Method": "Get",
+    "RelativePath": "WeatherForecast",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[elsaeedTea.WeatherForecast, elsaeedTea, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "GetWeatherForecast"
+  }
+]

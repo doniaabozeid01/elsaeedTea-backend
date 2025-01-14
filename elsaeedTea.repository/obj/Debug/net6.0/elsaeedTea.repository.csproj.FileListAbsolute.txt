@@ -1,0 +1,15 @@
+C:\Users\Public\website\Backend\elsaeedTea\elsaeedTea.repository\bin\Debug\net6.0\elsaeedTea.repository.deps.json
+C:\Users\Public\website\Backend\elsaeedTea\elsaeedTea.repository\bin\Debug\net6.0\elsaeedTea.repository.dll
+C:\Users\Public\website\Backend\elsaeedTea\elsaeedTea.repository\bin\Debug\net6.0\elsaeedTea.repository.pdb
+C:\Users\Public\website\Backend\elsaeedTea\elsaeedTea.repository\bin\Debug\net6.0\elsaeedTea.data.dll
+C:\Users\Public\website\Backend\elsaeedTea\elsaeedTea.repository\bin\Debug\net6.0\elsaeedTea.data.pdb
+C:\Users\Public\website\Backend\elsaeedTea\elsaeedTea.repository\obj\Debug\net6.0\elsaeedTea.repository.csproj.AssemblyReference.cache
+C:\Users\Public\website\Backend\elsaeedTea\elsaeedTea.repository\obj\Debug\net6.0\elsaeedTea.repository.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Public\website\Backend\elsaeedTea\elsaeedTea.repository\obj\Debug\net6.0\elsaeedTea.repository.AssemblyInfoInputs.cache
+C:\Users\Public\website\Backend\elsaeedTea\elsaeedTea.repository\obj\Debug\net6.0\elsaeedTea.repository.AssemblyInfo.cs
+C:\Users\Public\website\Backend\elsaeedTea\elsaeedTea.repository\obj\Debug\net6.0\elsaeedTea.repository.csproj.CoreCompileInputs.cache
+C:\Users\Public\website\Backend\elsaeedTea\elsaeedTea.repository\obj\Debug\net6.0\elsaeedT.0363848D.Up2Date
+C:\Users\Public\website\Backend\elsaeedTea\elsaeedTea.repository\obj\Debug\net6.0\elsaeedTea.repository.dll
+C:\Users\Public\website\Backend\elsaeedTea\elsaeedTea.repository\obj\Debug\net6.0\refint\elsaeedTea.repository.dll
+C:\Users\Public\website\Backend\elsaeedTea\elsaeedTea.repository\obj\Debug\net6.0\elsaeedTea.repository.pdb
+C:\Users\Public\website\Backend\elsaeedTea\elsaeedTea.repository\obj\Debug\net6.0\ref\elsaeedTea.repository.dll
