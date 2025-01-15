@@ -12,3 +12,4 @@ C:\Users\Public\website\Backend\elsaeedTea\elsaeedTea.data\obj\Debug\net6.0\ref\
 C:\Users\Public\website\Backend\elsaeedTea\elsaeedTea.data\bin\Debug\net6.0\elsaeedTea.data.runtimeconfig.json
 C:\Users\Public\website\Backend\elsaeedTea\elsaeedTea.data\obj\Debug\net6.0\elsaeedTea.data.csproj.AssemblyReference.cache
 C:\Users\Public\website\Backend\elsaeedTea\elsaeedTea.data\obj\Debug\net6.0\elsaeedTea.data.genruntimeconfig.cache
+C:\Users\Public\website\Backend\elsaeedTea\elsaeedTea.data\obj\Debug\net6.0\elsaeedTea.data.sourcelink.json

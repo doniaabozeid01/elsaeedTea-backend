@@ -13,3 +13,4 @@ C:\Users\Public\website\Backend\elsaeedTea\elsaeedTea.repository\obj\Debug\net6.
 C:\Users\Public\website\Backend\elsaeedTea\elsaeedTea.repository\obj\Debug\net6.0\refint\elsaeedTea.repository.dll
 C:\Users\Public\website\Backend\elsaeedTea\elsaeedTea.repository\obj\Debug\net6.0\elsaeedTea.repository.pdb
 C:\Users\Public\website\Backend\elsaeedTea\elsaeedTea.repository\obj\Debug\net6.0\ref\elsaeedTea.repository.dll
+C:\Users\Public\website\Backend\elsaeedTea\elsaeedTea.repository\obj\Debug\net6.0\elsaeedTea.repository.sourcelink.json

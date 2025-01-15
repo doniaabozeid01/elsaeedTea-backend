@@ -1,5 +1,85 @@
 [
   {
+    "ContainingType": "elsaeedTea.Controllers.AccountController",
+    "Method": "ChangePassword",
+    "RelativePath": "api/Account/changePassword",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "changePasswordDto",
+        "Type": "elsaeedTea.service.Services.AuthenticationServices.Dtos.ChangePasswordDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "elsaeedTea.Controllers.AccountController",
+    "Method": "ForgotPassword",
+    "RelativePath": "api/Account/forgotPassword",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "forgotPasswordDto",
+        "Type": "elsaeedTea.service.Services.EmailServices.Dtos.ForgotPasswordDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "elsaeedTea.Controllers.AccountController",
+    "Method": "Login",
+    "RelativePath": "api/Account/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "loginDto",
+        "Type": "elsaeedTea.service.Services.AuthenticationServices.Dtos.loginDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "elsaeedTea.Controllers.AccountController",
+    "Method": "ResetPassword",
+    "RelativePath": "api/Account/resetPassword",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "resetPasswordDto",
+        "Type": "elsaeedTea.service.Services.EmailServices.Dtos.ResetPasswordDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "elsaeedTea.Controllers.AccountController",
+    "Method": "UserRegister",
+    "RelativePath": "api/Account/userRegister",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "registerDto",
+        "Type": "elsaeedTea.service.Services.AuthenticationServices.Dtos.registerDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "elsaeedTea.Controllers.TeaController",
     "Method": "AddTeaProduct",
     "RelativePath": "api/Tea/AddTeaProduct",

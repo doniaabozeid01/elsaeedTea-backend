@@ -4,11 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using elsaeedTea.data.Entities;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace elsaeedTea.data.Context
 {
-    public class ElsaeedTeaDbContext : DbContext
+    public class ElsaeedTeaDbContext : IdentityDbContext<ApplicationUser>
     {
         public ElsaeedTeaDbContext(DbContextOptions<ElsaeedTeaDbContext> options) : base(options)
         {
