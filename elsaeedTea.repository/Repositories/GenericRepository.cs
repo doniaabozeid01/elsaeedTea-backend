@@ -53,5 +53,17 @@ namespace elsaeedTea.repository.Repositories
         {
             return await _context.Set<ElsaeedTeaProduct>().Include(x => x.Images).FirstOrDefaultAsync(x => x.Id==id);
         }
+
+        public async Task<IReadOnlyList<CartItem>> GetAllCartsAsync()
+        {
+            return await _context.Set<CartItem>().Include(x => x.User).Include(x => x.Product).ThenInclude(x => x.Images).ToListAsync();
+        }
+
+        public async Task<CartItem> GetCartByIdAsync(int id)
+        {
+            return await _context.Set<CartItem>().Include(x => x.User).Include(x => x.Product).ThenInclude(x => x.Images).FirstOrDefaultAsync(x => x.Id == id);
+        }
+
+
     }
 }

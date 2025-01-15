@@ -80,6 +80,125 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "elsaeedTea.Controllers.CartController",
+    "Method": "AddCart",
+    "RelativePath": "api/Cart/AddCart",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "cartDto",
+        "Type": "elsaeedTea.service.Services.CartServices.Dtos.AddCart",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "elsaeedTea.service.Services.CartServices.Dtos.GetCart",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "elsaeedTea.Controllers.CartController",
+    "Method": "DeleteCart",
+    "RelativePath": "api/Cart/DeleteCart/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "elsaeedTea.Controllers.CartController",
+    "Method": "GetAllCarts",
+    "RelativePath": "api/Cart/GetAllCarts",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IReadOnlyList\u00601[[elsaeedTea.service.Services.CartServices.Dtos.GetCart, elsaeedTea.service, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "elsaeedTea.Controllers.CartController",
+    "Method": "GetCartById",
+    "RelativePath": "api/Cart/GetCartById/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "elsaeedTea.service.Services.teaProductServices.Dtos.TeaDetailsDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "elsaeedTea.Controllers.CartController",
+    "Method": "UpdateCart",
+    "RelativePath": "api/Cart/UpdateCart",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "cartDto",
+        "Type": "elsaeedTea.service.Services.CartServices.Dtos.AddCart",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "elsaeedTea.service.Services.CartServices.Dtos.GetCart",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "elsaeedTea.Controllers.TeaController",
     "Method": "AddTeaProduct",
     "RelativePath": "api/Tea/AddTeaProduct",

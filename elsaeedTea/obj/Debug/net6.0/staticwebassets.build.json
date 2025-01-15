@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "elTghukkX34rD1s/reur7i0lwuM3EUDdMOIazT/3u0Q=",
+  "Hash": "yskDft0wO/jD4CHHhh6KTujd1J5UtALFRJzIddqyPDI=",
   "Source": "elsaeedTea",
   "BasePath": "_content/elsaeedTea",
   "Mode": "Default",
@@ -57,6 +57,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\a7789ebb-4e49-4485-bee1-69325d1a3ec4.jpeg"
+    },
+    {
+      "Identity": "C:\\Users\\Public\\website\\Backend\\elsaeedTea\\elsaeedTea\\wwwroot\\images\\b06c4e4a-25f2-498c-9a59-468f488d6174.jpeg",
+      "SourceId": "elsaeedTea",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Public\\website\\Backend\\elsaeedTea\\elsaeedTea\\wwwroot\\",
+      "BasePath": "_content/elsaeedTea",
+      "RelativePath": "images/b06c4e4a-25f2-498c-9a59-468f488d6174#[.{fingerprint}]?.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "1sdit8b70y",
+      "Integrity": "QeN6kJr4VYgX8IbDzs0ZHATBeSs1db/CPEnm3+gS1eU=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\b06c4e4a-25f2-498c-9a59-468f488d6174.jpeg"
     },
     {
       "Identity": "C:\\Users\\Public\\website\\Backend\\elsaeedTea\\elsaeedTea\\wwwroot\\images\\bd4c9a78-84ec-4b02-a955-8c392f651067.png",
@@ -305,6 +326,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-KaGpaNynDvWd01mzZWGk7mOSclpTFppIxkjb6/g3JQQ="
+        }
+      ]
+    },
+    {
+      "Route": "images/b06c4e4a-25f2-498c-9a59-468f488d6174.1sdit8b70y.jpeg",
+      "AssetFile": "C:\\Users\\Public\\website\\Backend\\elsaeedTea\\elsaeedTea\\wwwroot\\images\\b06c4e4a-25f2-498c-9a59-468f488d6174.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "168196"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"QeN6kJr4VYgX8IbDzs0ZHATBeSs1db/CPEnm3+gS1eU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 15 Jan 2025 23:31:29 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "1sdit8b70y"
+        },
+        {
+          "Name": "label",
+          "Value": "images/b06c4e4a-25f2-498c-9a59-468f488d6174.jpeg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-QeN6kJr4VYgX8IbDzs0ZHATBeSs1db/CPEnm3+gS1eU="
+        }
+      ]
+    },
+    {
+      "Route": "images/b06c4e4a-25f2-498c-9a59-468f488d6174.jpeg",
+      "AssetFile": "C:\\Users\\Public\\website\\Backend\\elsaeedTea\\elsaeedTea\\wwwroot\\images\\b06c4e4a-25f2-498c-9a59-468f488d6174.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "168196"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"QeN6kJr4VYgX8IbDzs0ZHATBeSs1db/CPEnm3+gS1eU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 15 Jan 2025 23:31:29 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-QeN6kJr4VYgX8IbDzs0ZHATBeSs1db/CPEnm3+gS1eU="
         }
       ]
     },

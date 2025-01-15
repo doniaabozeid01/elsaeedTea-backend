@@ -79,6 +79,15 @@ namespace elsaeedTea.service.Services.teaProductServices
             return mappedTea;
         }
 
+
+        public async Task<TeaDetailsDto> GetTeaDetailsByIdWithoutInclude(int id)
+        {
+            var teaProduct = await _unitOfWork.Repository<ElsaeedTeaProduct>().GetByIdAsync(id);
+            var mappedTea = _mapper.Map<TeaDetailsDto>(teaProduct);
+            return mappedTea;
+        }
+
+
         public async Task<TeaDetailsDto> UpdateTea (int id, AddNewTeaDto addNewTea)
         {
             var productTea = await _unitOfWork.Repository<ElsaeedTeaProduct>().GetByIdAsync(id);

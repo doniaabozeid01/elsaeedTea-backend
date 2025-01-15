@@ -15,9 +15,16 @@ namespace elsaeedTea.repository.Interfaces
         void Update (TEntity entity);
         void Delete(TEntity entity);
 
-        Task<ElsaeedTeaProduct> GetTeaByIdAsync(int id);
 
+
+        Task<ElsaeedTeaProduct> GetTeaByIdAsync(int id);
         Task<IReadOnlyList<ElsaeedTeaProduct>> GetAllTeaAsync();
+
+
+
+        Task<IReadOnlyList<CartItem>> GetAllCartsAsync();
+        Task<CartItem> GetCartByIdAsync(int id);
+
 
 
     }

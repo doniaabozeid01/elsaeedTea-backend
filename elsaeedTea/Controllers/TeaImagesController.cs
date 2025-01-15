@@ -169,7 +169,7 @@ namespace elsaeedTea.Controllers
                     return BadRequest("Image and details are required.");
                 }
 
-                var tea = await _teaServices.GetTeaDetailsById(teaImageDto.ProductId);
+                var tea = await _teaServices.GetTeaDetailsByIdWithoutInclude(teaImageDto.ProductId);
                 if(tea == null)
                 {
                     return NotFound($"there is no tea exist with id {teaImageDto.ProductId}");
@@ -288,6 +288,12 @@ namespace elsaeedTea.Controllers
                 if (teaImageDto == null)
                 {
                     return BadRequest("Tea image details shouldn't be empty.");
+                }
+
+                var product = _teaServices.GetTeaDetailsById(teaImageDto.ProductId);
+                if (product == null)
+                {
+                    return BadRequest($"there is no tea product with id {teaImageDto.ProductId}");
                 }
 
                 var existingImage = await _imageServices.GetTeaImagesById(id);
