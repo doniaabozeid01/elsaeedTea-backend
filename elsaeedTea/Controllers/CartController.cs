@@ -196,17 +196,17 @@ namespace elsaeedTea.Controllers
                 }
 
 
-                var tea = await _cartServices.UpdateCart(id, cartDto);
-                if (tea == null)
+                var cart = await _cartServices.UpdateCart(id, cartDto);
+                if (cart == null)
                 {
                     return BadRequest("there is no cart with that id .");
                 }
 
-                if (tea == null && cartDto == null)
+                if (cart == null && cartDto == null)
                 {
                     return BadRequest("Cart shouldn't be empty .");
                 }
-                else if (tea == null && cartDto != null)
+                else if (cart == null && cartDto != null)
                 {
                     return BadRequest("Failed to save updated cart to the database.");
 
@@ -214,7 +214,7 @@ namespace elsaeedTea.Controllers
 
 
                 // إرسال الاستجابة الناجحة مع البيانات
-                return Ok(tea);
+                return Ok(cart);
             }
             catch (Exception ex)
             {

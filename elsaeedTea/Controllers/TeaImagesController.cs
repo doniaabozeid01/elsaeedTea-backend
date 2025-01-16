@@ -290,7 +290,7 @@ namespace elsaeedTea.Controllers
                     return BadRequest("Tea image details shouldn't be empty.");
                 }
 
-                var product = _teaServices.GetTeaDetailsById(teaImageDto.ProductId);
+                var product = await _teaServices.GetTeaDetailsById(teaImageDto.ProductId);
                 if (product == null)
                 {
                     return BadRequest($"there is no tea product with id {teaImageDto.ProductId}");

@@ -99,8 +99,8 @@ namespace elsaeedTea.service.Services.CartServices
                 cart.ProductId = mappedCart.ProductId;
                 cart.Quantity = mappedCart.Quantity;
                 cart.UserId = mappedCart.UserId;
-                cart.Product = mappedCart.Product;
-                cart.User = mappedCart.User;
+                //cart.Product = mappedCart.Product;
+                //cart.User = mappedCart.User;
 
                 // تحديث الكائن في الـ Repository
                 _unitOfWork.Repository<CartItem>().Update(cart);
@@ -126,11 +126,6 @@ namespace elsaeedTea.service.Services.CartServices
                 return mapToDto;
             }
 
-            //else
-            //{
-            //    // إذا لم يتم العثور على المنتج في قاعدة البيانات
-            //    throw new Exception("Tea product not found.");
-            //}
             return null;
         }
     }
