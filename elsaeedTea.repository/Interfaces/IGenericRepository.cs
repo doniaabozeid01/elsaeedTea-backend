@@ -10,10 +10,12 @@ namespace elsaeedTea.repository.Interfaces
     public interface IGenericRepository<TEntity> where TEntity : BaseEntity
     {
         Task<TEntity> GetByIdAsync(int id);
+        Task<TEntity> GetByIdAsync(string id);
         Task<IReadOnlyList<TEntity>> GetAllAsync();
         Task AddAsync (TEntity entity);
         void Update (TEntity entity);
         void Delete(TEntity entity);
+        Task<IReadOnlyList<OrderRequest>> GetOrdersByUserId(string id);
 
 
 
@@ -24,6 +26,12 @@ namespace elsaeedTea.repository.Interfaces
 
         Task<IReadOnlyList<CartItem>> GetAllCartsAsync();
         Task<CartItem> GetCartByIdAsync(int id);
+
+
+        Task<IReadOnlyList<CartItem>> GetByUserIdAsync(string id);
+
+
+
 
 
 

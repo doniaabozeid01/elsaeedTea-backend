@@ -82,6 +82,13 @@ namespace elsaeedTea.service.Services.CartServices
             return mappedcart;
         }
 
+        public async Task<IReadOnlyList<GetCart>> GetCartByUserId(string id)
+        {
+            var cart = await _unitOfWork.Repository<CartItem>().GetByUserIdAsync(id);
+            var mappedcart = _mapper.Map<IReadOnlyList<GetCart>>(cart);
+            return mappedcart;
+        }
+
 
 
 
@@ -128,5 +135,36 @@ namespace elsaeedTea.service.Services.CartServices
 
             return null;
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     }
 }

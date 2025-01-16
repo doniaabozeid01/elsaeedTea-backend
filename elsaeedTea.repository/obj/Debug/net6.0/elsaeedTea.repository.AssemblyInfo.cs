@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("elsaeedTea.repository")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c387a16a88ccdb7314028108943cf62ea2796fe8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+377144316a16adad9b2c88a14cf051956cf6a745")]
 [assembly: System.Reflection.AssemblyProductAttribute("elsaeedTea.repository")]
 [assembly: System.Reflection.AssemblyTitleAttribute("elsaeedTea.repository")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

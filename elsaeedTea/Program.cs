@@ -15,6 +15,7 @@ using elsaeedTea.service.Services.AuthenticationServices;
 using elsaeedTea.service.Services.EmailServices;
 using elsaeedTea.service.Services.CartServices;
 using elsaeedTea.service.Services.CartServices.Dtos;
+using elsaeedTea.service.Services.Order;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -67,6 +68,7 @@ builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 builder.Services.AddScoped<ITeaServices, TeaServices>();
 builder.Services.AddScoped<IImageServices, ImageServices>();
 builder.Services.AddScoped<ICartService, CartService>();
+builder.Services.AddScoped<IOrderService, OrderService>();
 builder.Services.AddScoped<IJwtTokenService, JwtTokenService>();
 builder.Services.AddSingleton<IEmailSender, EmailSender>();
 

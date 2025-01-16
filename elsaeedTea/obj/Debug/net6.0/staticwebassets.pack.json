@@ -5,10 +5,6 @@
       "PackagePath": "staticwebassets\\images\\280d1079-ce13-48b6-af2e-c154d59974b8.png"
     },
     {
-      "Id": "C:\\Users\\Public\\website\\Backend\\elsaeedTea\\elsaeedTea\\wwwroot\\images\\417aaf2e-bc61-40af-839f-3eda43ae51db.png",
-      "PackagePath": "staticwebassets\\images\\417aaf2e-bc61-40af-839f-3eda43ae51db.png"
-    },
-    {
       "Id": "C:\\Users\\Public\\website\\Backend\\elsaeedTea\\elsaeedTea\\wwwroot\\images\\8cf061d6-2a3f-4d2b-b67d-ae370992c870.png",
       "PackagePath": "staticwebassets\\images\\8cf061d6-2a3f-4d2b-b67d-ae370992c870.png"
     },
@@ -35,6 +31,10 @@
     {
       "Id": "C:\\Users\\Public\\website\\Backend\\elsaeedTea\\elsaeedTea\\wwwroot\\images\\df6a9365-ad47-48da-90ce-7cf93e897371.png",
       "PackagePath": "staticwebassets\\images\\df6a9365-ad47-48da-90ce-7cf93e897371.png"
+    },
+    {
+      "Id": "C:\\Users\\Public\\website\\Backend\\elsaeedTea\\elsaeedTea\\wwwroot\\images\\e041c8ed-fd91-428c-918b-1f5de5687b80.png",
+      "PackagePath": "staticwebassets\\images\\e041c8ed-fd91-428c-918b-1f5de5687b80.png"
     },
     {
       "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.elsaeedTea.props",

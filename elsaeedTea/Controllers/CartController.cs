@@ -134,6 +134,12 @@ namespace elsaeedTea.Controllers
                     return NotFound($"there is no user exist with id {cartDto.UserId}");
                 }
 
+                if(cartDto.Quantity <=0)
+                {
+                    return BadRequest("Cart quantity should be greater than 0 .");
+
+                }
+
                 var cart = await _cartServices.AddCart(cartDto);
 
                 if (cart == null && cartDto == null)

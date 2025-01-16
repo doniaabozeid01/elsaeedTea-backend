@@ -99,6 +99,9 @@ namespace elsaeedTea.data.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
+                    b.Property<string>("OrderRequestId")
+                        .HasColumnType("nvarchar(450)");
+
                     b.Property<int>("ProductId")
                         .HasColumnType("int");
 
@@ -111,11 +114,13 @@ namespace elsaeedTea.data.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("OrderRequestId");
+
                     b.HasIndex("ProductId");
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("Cart");
+                    b.ToTable("Cart", (string)null);
                 });
 
             modelBuilder.Entity("elsaeedTea.data.Entities.ElsaeedTeaProduct", b =>
@@ -142,7 +147,7 @@ namespace elsaeedTea.data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("TeaProduct");
+                    b.ToTable("TeaProduct", (string)null);
                 });
 
             modelBuilder.Entity("elsaeedTea.data.Entities.ElsaeedTeaProductImage", b =>
@@ -163,7 +168,82 @@ namespace elsaeedTea.data.Migrations
 
                     b.HasIndex("ProductId");
 
-                    b.ToTable("TeaProductImages");
+                    b.ToTable("TeaProductImages", (string)null);
+                });
+
+            modelBuilder.Entity("elsaeedTea.data.Entities.OrderItem", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("OrderRequestId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<decimal>("Price")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Quantity")
+                        .HasColumnType("int");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("OrderRequestId");
+
+                    b.HasIndex("ProductId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("orderItems", (string)null);
+                });
+
+            modelBuilder.Entity("elsaeedTea.data.Entities.OrderRequest", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("Country")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Governorate")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PaymentMethod")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PhoneNumber")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<decimal>("TotalAmount")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<DateTime?>("UpdatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("orderRequest", (string)null);
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -301,6 +381,10 @@ namespace elsaeedTea.data.Migrations
 
             modelBuilder.Entity("elsaeedTea.data.Entities.CartItem", b =>
                 {
+                    b.HasOne("elsaeedTea.data.Entities.OrderRequest", "OrderRequest")
+                        .WithMany("cartItems")
+                        .HasForeignKey("OrderRequestId");
+
                     b.HasOne("elsaeedTea.data.Entities.ElsaeedTeaProduct", "Product")
                         .WithMany()
                         .HasForeignKey("ProductId")
@@ -312,6 +396,8 @@ namespace elsaeedTea.data.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("OrderRequest");
 
                     b.Navigation("Product");
 
@@ -327,6 +413,33 @@ namespace elsaeedTea.data.Migrations
                         .IsRequired();
 
                     b.Navigation("Product");
+                });
+
+            modelBuilder.Entity("elsaeedTea.data.Entities.OrderItem", b =>
+                {
+                    b.HasOne("elsaeedTea.data.Entities.OrderRequest", "OrderRequest")
+                        .WithMany()
+                        .HasForeignKey("OrderRequestId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("elsaeedTea.data.Entities.ElsaeedTeaProduct", "Product")
+                        .WithMany()
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("elsaeedTea.data.Entities.ApplicationUser", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("OrderRequest");
+
+                    b.Navigation("Product");
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -383,6 +496,11 @@ namespace elsaeedTea.data.Migrations
             modelBuilder.Entity("elsaeedTea.data.Entities.ElsaeedTeaProduct", b =>
                 {
                     b.Navigation("Images");
+                });
+
+            modelBuilder.Entity("elsaeedTea.data.Entities.OrderRequest", b =>
+                {
+                    b.Navigation("cartItems");
                 });
 #pragma warning restore 612, 618
         }

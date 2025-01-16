@@ -11,6 +11,7 @@ namespace elsaeedTea.service.Services.CartServices
     public interface ICartService
     {
         Task<GetCart> GetCartById(int id);
+        Task<IReadOnlyList<GetCart>> GetCartByUserId(string id);
         Task<GetCart> GetCartByIdWithoutInclude(int id);
         Task<IReadOnlyList<GetCart>> GetAllCarts();
         Task<AddCart> AddCart(AddCart cartDto);
