@@ -1329,6 +1329,9 @@
             "type": "string",
             "nullable": true
           },
+          "status": {
+            "$ref": "#/components/schemas/OrderStatus"
+          },
           "createdAt": {
             "type": "string",
             "format": "date-time"
@@ -1397,6 +1400,9 @@
             "type": "string",
             "nullable": true
           },
+          "status": {
+            "$ref": "#/components/schemas/OrderStatus"
+          },
           "createdAt": {
             "type": "string",
             "format": "date-time"
@@ -1408,6 +1414,17 @@
           }
         },
         "additionalProperties": false
+      },
+      "OrderStatus": {
+        "enum": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "type": "integer",
+        "format": "int32"
       },
       "ResetPasswordDto": {
         "type": "object",

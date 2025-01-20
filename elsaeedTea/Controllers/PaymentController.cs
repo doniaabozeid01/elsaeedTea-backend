@@ -5,6 +5,7 @@ using elsaeedTea.service.Services.CartServices.Dtos;
 using elsaeedTea.service.Services.Order;
 using elsaeedTea.service.Services.Order.Dtos;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
 namespace elsaeedTea.Controllers
@@ -18,12 +19,14 @@ namespace elsaeedTea.Controllers
         private readonly IOrderService _orderService;
         private readonly ICartService _cartService;
         private readonly IMapper _mapper;
+        private readonly UserManager<ApplicationUser> _userManager;
 
-        public PaymentController(IOrderService orderService, ICartService cartService, IMapper mapper)
+        public PaymentController(IOrderService orderService, ICartService cartService, IMapper mapper, UserManager<ApplicationUser> userManager)
         {
             _orderService = orderService;
             _cartService = cartService;
             _mapper = mapper;
+            _userManager = userManager;
         }
 
         // إنشاء الطلب
@@ -33,6 +36,12 @@ namespace elsaeedTea.Controllers
             
             try
             {
+                var user = _userManager.FindByIdAsync(model.UserId);
+                if(user == null)
+                {
+                    return NotFound($"there is no users with id {model.UserId}");
+                }
+
                 // الحصول على السلة الخاصة بالمستخدم
                 var cartItems = await _cartService.GetCartByUserId(model.UserId);
                 if (cartItems == null || cartItems.Count == 0)
@@ -50,11 +59,17 @@ namespace elsaeedTea.Controllers
                     PhoneNumber = model.PhoneNumber,
                     cartItems = mappedCartItems, // تمرير المنتجات من السلة
                     TotalAmount = cartItems.Sum(item => item.Product.Price * item.Quantity), // حساب الإجمالي
-                    CreatedAt = DateTime.Now
+                    CreatedAt = DateTime.Now,
+                    Status = data.Enum.OrderStatus.Pending
                 };
 
                 // إنشاء الطلب باستخدام الـ DTO
                 var order = await _orderService.CreateOrderAsync(orderDto);
+
+                if(order == null)
+                {
+                    return BadRequest("there is an error occured");
+                }
 
                 // معالجة العناصر: الإضافة إلى OrderItem والحذف من السلة
                 foreach (var item in cartItems)
@@ -81,9 +96,6 @@ namespace elsaeedTea.Controllers
             {
                 return BadRequest($"Error creating order: {ex.Message}");
             }
-
-
-
 
         }
     
@@ -180,7 +192,7 @@ namespace elsaeedTea.Controllers
 
 
 
-
+        // بترجع كل ال orders بتاعت ال user بس ال orders اللي هو طريقه الدفع و total amount , العنوان و الكلام دا ------> Order Request
         [HttpGet("GetOrdersByUserId")]
         public async Task<ActionResult<GetOrderRequest>> GetOrdersByUserId(string id)
         {
@@ -203,6 +215,22 @@ namespace elsaeedTea.Controllers
 
             }
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

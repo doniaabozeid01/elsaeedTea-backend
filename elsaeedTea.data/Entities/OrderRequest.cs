@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using elsaeedTea.data.Enum;
 
 namespace elsaeedTea.data.Entities
 {
@@ -16,6 +17,7 @@ namespace elsaeedTea.data.Entities
         public string Country { get; set; } // البلد
         public string Governorate { get; set; } // المحافظة
         public string PhoneNumber { get; set; } // رقم الهاتف
+        public OrderStatus Status { get; set; } = OrderStatus.Pending;
         public DateTime CreatedAt { get; set; } = DateTime.Now;
         public DateTime? UpdatedAt { get; set; } =DateTime.Now;
     }

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("elsaeedTea.data")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+377144316a16adad9b2c88a14cf051956cf6a745")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d5e1552c8e7d830bf5d9559476c358877c782baa")]
 [assembly: System.Reflection.AssemblyProductAttribute("elsaeedTea.data")]
 [assembly: System.Reflection.AssemblyTitleAttribute("elsaeedTea.data")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -8,6 +8,7 @@ using elsaeedTea.data.Entities;
 using elsaeedTea.repository.Interfaces;
 using elsaeedTea.service.Services.CartServices;
 using elsaeedTea.service.Services.Order.Dtos;
+using Microsoft.AspNetCore.Identity;
 
 namespace elsaeedTea.service.Services.Order
 {
@@ -27,10 +28,11 @@ namespace elsaeedTea.service.Services.Order
 
         public async Task<OrderRequest> CreateOrderAsync(addOrder orderDto)
         {
-            if (orderDto.cartItems == null || orderDto.cartItems.Count == 0)
-                throw new Exception("Cannot create an order with an empty cart.");
 
-            //var totalAmount = orderDto.cartItems.Sum(item => item.Product.Price * item.Quantity);
+            
+
+            if (orderDto.cartItems == null || orderDto.cartItems.Count == 0)
+                return null;
 
             // إنشاء الكائن OrderRequest باستخدام البيانات من الـ DTO
             var order = new OrderRequest
@@ -42,23 +44,12 @@ namespace elsaeedTea.service.Services.Order
                 Country = orderDto.Country,
                 Governorate = orderDto.Governorate,
                 PhoneNumber = orderDto.PhoneNumber,
-                CreatedAt = DateTime.Now
+                CreatedAt = DateTime.Now,
+                Status = orderDto.Status,
             };
 
             // إضافة الطلب إلى قاعدة البيانات
             await _unitOfWork.Repository<OrderRequest>().AddAsync(order);
-
-            // Assign the OrderId to each CartItem and update them
-            //foreach (var item in orderDto.cartItems)
-            //{
-            //    item.OrderRequestId = order.Id; // ربط كل عنصر في السلة بالطلب الجديد
-            //    _unitOfWork.Repository<CartItem>().Update(item);
-            //}
-
-
-
-
-
 
             foreach (var item in orderDto.cartItems)
             {
@@ -79,16 +70,12 @@ namespace elsaeedTea.service.Services.Order
                 }
             }
 
+            var result = await _unitOfWork.CompleteAsync();
 
-
-
-
-
-
-
-
-
-            await _unitOfWork.CompleteAsync();
+            if(result <= 0)
+            {
+                return null;
+            }
 
             return order;
         }

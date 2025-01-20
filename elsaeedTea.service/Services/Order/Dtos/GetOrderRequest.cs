@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using elsaeedTea.data.Entities;
+using elsaeedTea.data.Enum;
 
 namespace elsaeedTea.service.Services.Order.Dtos
 {
@@ -17,6 +18,7 @@ namespace elsaeedTea.service.Services.Order.Dtos
         public string Country { get; set; } // البلد
         public string Governorate { get; set; } // المحافظة
         public string PhoneNumber { get; set; } // رقم الهاتف
+        public OrderStatus Status { get; set; } = OrderStatus.Pending;
         public DateTime CreatedAt { get; set; } = DateTime.Now;
         public DateTime? UpdatedAt { get; set; } = DateTime.Now;
     }
