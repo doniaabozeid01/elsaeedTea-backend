@@ -34,5 +34,6 @@ namespace elsaeedTea.data.Context
         public DbSet<CartItem> Cart { get; set; }
         public DbSet<OrderRequest> orderRequest { get; set; }
         public DbSet<OrderItem> orderItems { get; set; }
+        public DbSet<ProductReviews> Reviews { get; set; }
     }
 }

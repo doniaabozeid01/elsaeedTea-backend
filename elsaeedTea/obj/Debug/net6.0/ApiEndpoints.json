@@ -313,6 +313,125 @@
     ]
   },
   {
+    "ContainingType": "elsaeedTea.Controllers.ReviewsController",
+    "Method": "AddReview",
+    "RelativePath": "api/Reviews/AddReview",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "reviewDto",
+        "Type": "elsaeedTea.service.Services.Reviews.Dtos.AddReviewDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "elsaeedTea.service.Services.Reviews.Dtos.AddReviewDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "elsaeedTea.Controllers.ReviewsController",
+    "Method": "DeleteReview",
+    "RelativePath": "api/Reviews/DeleteReview/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "elsaeedTea.Controllers.ReviewsController",
+    "Method": "GetAllReviews",
+    "RelativePath": "api/Reviews/GetAllReviews",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IReadOnlyList\u00601[[elsaeedTea.service.Services.Reviews.Dtos.GetReviewDto, elsaeedTea.service, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "elsaeedTea.Controllers.ReviewsController",
+    "Method": "GetReviewById",
+    "RelativePath": "api/Reviews/GetReviewById/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "elsaeedTea.service.Services.Reviews.Dtos.GetReviewDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "elsaeedTea.Controllers.ReviewsController",
+    "Method": "UpdateReview",
+    "RelativePath": "api/Reviews/UpdateReview",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "reviewDto",
+        "Type": "elsaeedTea.service.Services.Reviews.Dtos.AddReviewDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "elsaeedTea.service.Services.Reviews.Dtos.GetReviewDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "elsaeedTea.Controllers.TeaController",
     "Method": "AddTeaProduct",
     "RelativePath": "api/Tea/AddTeaProduct",

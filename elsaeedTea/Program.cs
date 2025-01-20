@@ -16,6 +16,8 @@ using elsaeedTea.service.Services.EmailServices;
 using elsaeedTea.service.Services.CartServices;
 using elsaeedTea.service.Services.CartServices.Dtos;
 using elsaeedTea.service.Services.Order;
+using elsaeedTea.service.Services.Reviews;
+using elsaeedTea.service.Services.Reviews.Dtos;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -69,6 +71,7 @@ builder.Services.AddScoped<ITeaServices, TeaServices>();
 builder.Services.AddScoped<IImageServices, ImageServices>();
 builder.Services.AddScoped<ICartService, CartService>();
 builder.Services.AddScoped<IOrderService, OrderService>();
+builder.Services.AddScoped<IReviewsServices, ReviewsServices>();
 builder.Services.AddScoped<IJwtTokenService, JwtTokenService>();
 builder.Services.AddSingleton<IEmailSender, EmailSender>();
 
@@ -76,6 +79,7 @@ builder.Services.AddSingleton<IEmailSender, EmailSender>();
 builder.Services.AddAutoMapper(typeof(ProductProfile));
 builder.Services.AddAutoMapper(typeof(ImageProfile));
 builder.Services.AddAutoMapper(typeof(CartProfile));
+builder.Services.AddAutoMapper(typeof(ReviewProfile));
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
