@@ -1,4 +1,5 @@
-﻿using elsaeedTea.service.Services.teaProductServices;
+﻿using elsaeedTea.service.Services.TeaDetailsServices.Dtos;
+using elsaeedTea.service.Services.teaProductServices;
 using elsaeedTea.service.Services.teaProductServices.Dtos;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -59,8 +60,8 @@ namespace elsaeedTea.Controllers
 
 
 
-        [HttpGet("GetTeaDetailsById/{id}")]
-        public async Task<ActionResult<TeaDetailsDto>> GetTeaDetailsById(int id)
+        [HttpGet("GetTeaById/{id}")]
+        public async Task<ActionResult<TeaDetailsDto>> GetTeaById(int id)
         {
             try
             {
@@ -253,6 +254,36 @@ namespace elsaeedTea.Controllers
 
 
 
+        [HttpGet("GetDetailsByProductId/{id}")]
+        public async Task<ActionResult<IReadOnlyList<TeaDetailsDto>>> GetDetailsByProductId(int id)
+        {
+            try
+            {
 
+
+                if (id <= 0)
+                {
+                    return BadRequest("Invalid Id");
+                }
+                // الحصول على جميع تفاصيل الشاي
+                var teaProduct = await _teaServices.GetDetailsByProductId(id);
+
+                // التحقق إذا كانت البيانات فارغة
+                if (teaProduct == null)
+                {
+                    // إرسال استجابة فارغة مع حالة 404 (Not Found)
+                    return NotFound("No tea product found.");
+                }
+
+                // إرسال الاستجابة الناجحة مع البيانات
+                return Ok(teaProduct);
+            }
+            catch (Exception ex)
+            {
+                // في حالة حدوث استثناء أثناء تنفيذ الكود
+                // يمكنك تسجيل الخطأ أو إضافة تفاصيل إضافية هنا
+                return StatusCode(500, $"Internal server error: {ex.Message}");
+            }
+        }
     }
 }

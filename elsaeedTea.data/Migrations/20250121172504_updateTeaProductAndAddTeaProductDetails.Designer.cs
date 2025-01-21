@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using elsaeedTea.data.Context;
 
@@ -11,9 +12,10 @@ using elsaeedTea.data.Context;
 namespace elsaeedTea.data.Migrations
 {
     [DbContext(typeof(ElsaeedTeaDbContext))]
-    partial class ElsaeedTeaDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250121172504_updateTeaProductAndAddTeaProductDetails")]
+    partial class updateTeaProductAndAddTeaProductDetails
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -102,7 +104,7 @@ namespace elsaeedTea.data.Migrations
                     b.Property<string>("OrderRequestId")
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<int>("ProductDetailsId")
+                    b.Property<int>("ProductId")
                         .HasColumnType("int");
 
                     b.Property<int>("Quantity")
@@ -116,7 +118,7 @@ namespace elsaeedTea.data.Migrations
 
                     b.HasIndex("OrderRequestId");
 
-                    b.HasIndex("ProductDetailsId");
+                    b.HasIndex("ProductId");
 
                     b.HasIndex("UserId");
 
@@ -204,7 +206,7 @@ namespace elsaeedTea.data.Migrations
                     b.Property<decimal>("Price")
                         .HasColumnType("decimal(18,2)");
 
-                    b.Property<int>("ProductDetailsId")
+                    b.Property<int>("ProductId")
                         .HasColumnType("int");
 
                     b.Property<int>("Quantity")
@@ -218,7 +220,7 @@ namespace elsaeedTea.data.Migrations
 
                     b.HasIndex("OrderRequestId");
 
-                    b.HasIndex("ProductDetailsId");
+                    b.HasIndex("ProductId");
 
                     b.HasIndex("UserId");
 
@@ -442,9 +444,9 @@ namespace elsaeedTea.data.Migrations
                         .WithMany("cartItems")
                         .HasForeignKey("OrderRequestId");
 
-                    b.HasOne("elsaeedTea.data.Entities.ElsaeedTeaProductDetails", "ProductDetails")
+                    b.HasOne("elsaeedTea.data.Entities.ElsaeedTeaProduct", "Product")
                         .WithMany()
-                        .HasForeignKey("ProductDetailsId")
+                        .HasForeignKey("ProductId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -456,7 +458,7 @@ namespace elsaeedTea.data.Migrations
 
                     b.Navigation("OrderRequest");
 
-                    b.Navigation("ProductDetails");
+                    b.Navigation("Product");
 
                     b.Navigation("User");
                 });
@@ -491,9 +493,9 @@ namespace elsaeedTea.data.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("elsaeedTea.data.Entities.ElsaeedTeaProductDetails", "ProductDetails")
+                    b.HasOne("elsaeedTea.data.Entities.ElsaeedTeaProduct", "Product")
                         .WithMany()
-                        .HasForeignKey("ProductDetailsId")
+                        .HasForeignKey("ProductId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -505,7 +507,7 @@ namespace elsaeedTea.data.Migrations
 
                     b.Navigation("OrderRequest");
 
-                    b.Navigation("ProductDetails");
+                    b.Navigation("Product");
 
                     b.Navigation("User");
                 });

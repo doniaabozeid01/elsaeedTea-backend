@@ -7,6 +7,7 @@ using AutoMapper;
 using elsaeedTea.data.Context;
 using elsaeedTea.data.Entities;
 using elsaeedTea.repository.Interfaces;
+using elsaeedTea.service.Services.TeaDetailsServices.Dtos;
 using elsaeedTea.service.Services.teaProductServices.Dtos;
 using static System.Net.Mime.MediaTypeNames;
 
@@ -100,8 +101,8 @@ namespace elsaeedTea.service.Services.teaProductServices
                 // تحديث الكائن بالبيانات الجديدة
                 productTea.Name = mappedTea.Name;
                 productTea.Description = mappedTea.Description;
-                productTea.Price = mappedTea.Price;
-                productTea.Weight = mappedTea.Weight;
+                //productTea.Price = mappedTea.Price;
+                //productTea.Weight = mappedTea.Weight;
 
                 // تحديث الكائن في الـ Repository
                 _unitOfWork.Repository<ElsaeedTeaProduct>().Update(productTea);
@@ -119,8 +120,8 @@ namespace elsaeedTea.service.Services.teaProductServices
                     Id = id,
                     Name = mappedTea.Name,
                     Description = mappedTea.Description,
-                    Price = mappedTea.Price,
-                    Weight = mappedTea.Weight,
+                    //Price = mappedTea.Price,
+                    //Weight = mappedTea.Weight,
                     Images = productTea.Images,
                 };
 
@@ -134,5 +135,44 @@ namespace elsaeedTea.service.Services.teaProductServices
             //}
             return null;
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        public async Task<IReadOnlyList<TeaDetailsDto>> GetDetailsByProductId(int id)
+        {
+            var teaProduct = await _unitOfWork.Repository<ElsaeedTeaProduct>().GetDetailsByProductIdAsync(id);
+            var mappedTea = _mapper.Map<IReadOnlyList<TeaDetailsDto>>(teaProduct);
+            return mappedTea;
+        }
+
+
     }
 }

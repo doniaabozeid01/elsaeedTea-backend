@@ -1,4 +1,5 @@
-﻿using elsaeedTea.service.Services.teaProductServices.Dtos;
+﻿using elsaeedTea.service.Services.TeaDetailsServices.Dtos;
+using elsaeedTea.service.Services.teaProductServices.Dtos;
 
 namespace elsaeedTea.service.Services.teaProductServices
 {
@@ -12,5 +13,7 @@ namespace elsaeedTea.service.Services.teaProductServices
         Task<AddNewTeaDto> AddTeaDetails(AddNewTeaDto addNewTea);
         Task<TeaDetailsDto> UpdateTea(int id, AddNewTeaDto addNewTea);
         Task<int> DeleteTea(int id);
+        Task<IReadOnlyList<TeaDetailsDto>> GetDetailsByProductId(int id);
+
     }
 }

@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using elsaeedTea.data.Context;
 
@@ -11,9 +12,10 @@ using elsaeedTea.data.Context;
 namespace elsaeedTea.data.Migrations
 {
     [DbContext(typeof(ElsaeedTeaDbContext))]
-    partial class ElsaeedTeaDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250121174748_updateRelationFromProductToProductDetails")]
+    partial class updateRelationFromProductToProductDetails
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

@@ -66,21 +66,24 @@ namespace elsaeedTea.repository.Repositories
 
         public async Task<IReadOnlyList<CartItem>> GetAllCartsAsync()
         {
-            return await _context.Set<CartItem>().Include(x => x.User).Include(x => x.Product).ThenInclude(x => x.Images).ToListAsync();
+            return await _context.Set<CartItem>().Include(x => x.User).Include(x => x.ProductDetails).ToListAsync();
         }
 
         public async Task<CartItem> GetCartByIdAsync(int id)
         {
-            return await _context.Set<CartItem>().Include(x => x.User).Include(x => x.Product).ThenInclude(x => x.Images).FirstOrDefaultAsync(x => x.Id == id);
+            return await _context.Set<CartItem>().Include(x => x.User).Include(x => x.ProductDetails).FirstOrDefaultAsync(x => x.Id == id);
         }
 
         public async Task<IReadOnlyList<CartItem>> GetByUserIdAsync(string id)
         {
-            return await _context.Set<CartItem>().Include(x => x.Product).Include(x => x.User).Where(x => x.UserId == id).ToListAsync();
+            return await _context.Set<CartItem>().Include(x => x.ProductDetails).Include(x => x.User).Where(x => x.UserId == id).ToListAsync();
         }
 
 
-
+        public async Task<IReadOnlyList<ElsaeedTeaProduct>> GetDetailsByProductIdAsync(int id)
+        {
+            return await _context.Set<ElsaeedTeaProduct>().Include(x => x.Details).Where(x => x.Id == id).ToListAsync();
+        }
 
 
 

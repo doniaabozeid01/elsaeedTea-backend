@@ -85,7 +85,7 @@ namespace elsaeedTea.service.Services.CartServices
         public async Task<IReadOnlyList<GetCart>> GetCartByUserId(string id)
         {
             var cart = await _unitOfWork.Repository<CartItem>().GetByUserIdAsync(id);
-            var mappedcart = _mapper.Map<IReadOnlyList<GetCart>>(cart);
+            var mappedcart =  _mapper.Map<IReadOnlyList<GetCart>>(cart);
             return mappedcart;
         }
 
@@ -103,7 +103,7 @@ namespace elsaeedTea.service.Services.CartServices
                 var mappedCart = _mapper.Map<CartItem>(cartDto);
 
                 // تحديث الكائن بالبيانات الجديدة
-                cart.ProductId = mappedCart.ProductId;
+                cart.ProductDetailsId = mappedCart.ProductDetailsId;
                 cart.Quantity = mappedCart.Quantity;
                 cart.UserId = mappedCart.UserId;
                 //cart.Product = mappedCart.Product;
@@ -123,11 +123,11 @@ namespace elsaeedTea.service.Services.CartServices
                 var mapToDto = new GetCart()
                 {
                     Id = id,
-                    ProductId = mappedCart.ProductId,
+                    ProductDetailsId = mappedCart.ProductDetailsId,
                     Quantity = mappedCart.Quantity,
                     UserId = mappedCart.UserId,
                     User = mappedCart.User,
-                    Product = mappedCart.Product
+                    ProductDetails = mappedCart.ProductDetails
                 };
 
                 return mapToDto;

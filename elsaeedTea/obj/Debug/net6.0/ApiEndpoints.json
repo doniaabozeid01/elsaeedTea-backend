@@ -313,6 +313,125 @@
     ]
   },
   {
+    "ContainingType": "elsaeedTea.Controllers.ProductDetailsController",
+    "Method": "AddTeaDetailsProduct",
+    "RelativePath": "api/ProductDetails/AddTeaDetailsProduct",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "teaDto",
+        "Type": "elsaeedTea.service.Services.TeaDetailsServices.Dtos.AddTeaDetailsDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "elsaeedTea.service.Services.TeaDetailsServices.Dtos.GetTeaDetailsDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "elsaeedTea.Controllers.ProductDetailsController",
+    "Method": "DeleteTeaDetailsProduct",
+    "RelativePath": "api/ProductDetails/DeleteTeaDetailsProduct/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "elsaeedTea.Controllers.ProductDetailsController",
+    "Method": "GetAllTeaDetailsProducts",
+    "RelativePath": "api/ProductDetails/GetAllTeaDetailsProducts",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IReadOnlyList\u00601[[elsaeedTea.service.Services.TeaDetailsServices.Dtos.GetTeaDetailsDto, elsaeedTea.service, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "elsaeedTea.Controllers.ProductDetailsController",
+    "Method": "GetTeaDetailsById",
+    "RelativePath": "api/ProductDetails/GetTeaDetailsById/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "elsaeedTea.service.Services.TeaDetailsServices.Dtos.GetTeaDetailsDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "elsaeedTea.Controllers.ProductDetailsController",
+    "Method": "UpdateTeaDetailsProduct",
+    "RelativePath": "api/ProductDetails/UpdateTeaDetailsProduct",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "teaDto",
+        "Type": "elsaeedTea.service.Services.TeaDetailsServices.Dtos.AddTeaDetailsDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "elsaeedTea.service.Services.TeaDetailsServices.Dtos.GetTeaDetailsDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "elsaeedTea.Controllers.ReviewsController",
     "Method": "AddReview",
     "RelativePath": "api/Reviews/AddReview",
@@ -495,8 +614,34 @@
   },
   {
     "ContainingType": "elsaeedTea.Controllers.TeaController",
-    "Method": "GetTeaDetailsById",
-    "RelativePath": "api/Tea/GetTeaDetailsById/{id}",
+    "Method": "GetDetailsByProductId",
+    "RelativePath": "api/Tea/GetDetailsByProductId/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IReadOnlyList\u00601[[elsaeedTea.service.Services.teaProductServices.Dtos.TeaDetailsDto, elsaeedTea.service, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "elsaeedTea.Controllers.TeaController",
+    "Method": "GetTeaById",
+    "RelativePath": "api/Tea/GetTeaById/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,

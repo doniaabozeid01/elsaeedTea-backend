@@ -10,7 +10,7 @@ namespace elsaeedTea.service.Services.CartServices.Dtos
     public class AddCart
     {
         public string UserId { get; set; }
-        public int ProductId { get; set; }
+        public int ProductDetailsId { get; set; }
         public int Quantity { get; set; }
 
     }

@@ -36,7 +36,7 @@ namespace elsaeedTea.Controllers
             
             try
             {
-                var user = _userManager.FindByIdAsync(model.UserId);
+                var user = await _userManager.FindByIdAsync(model.UserId);
                 if(user == null)
                 {
                     return NotFound($"there is no users with id {model.UserId}");
@@ -58,7 +58,8 @@ namespace elsaeedTea.Controllers
                     Governorate = model.Governorate,
                     PhoneNumber = model.PhoneNumber,
                     cartItems = mappedCartItems, // تمرير المنتجات من السلة
-                    TotalAmount = cartItems.Sum(item => item.Product.Price * item.Quantity), // حساب الإجمالي
+                    TotalAmount = cartItems.Sum(item => item.ProductDetails.Price * item.Quantity), // حساب الإجمالي
+                    //TotalAmount = 20, // حساب الإجمالي
                     CreatedAt = DateTime.Now,
                     Status = data.Enum.OrderStatus.Pending
                 };
@@ -78,9 +79,10 @@ namespace elsaeedTea.Controllers
                     var orderItem = new OrderItem
                     {
                         OrderRequestId = order.Id,
-                        ProductId = item.ProductId,
+                        ProductDetailsId = item.ProductDetailsId,
                         Quantity = item.Quantity,
-                        Price = item.Product.Price, // السعر عند الشراء
+                        Price = item.ProductDetails.Price, // السعر عند الشراء
+                        //Price = 3, // السعر عند الشراء
                         UserId = model.UserId
                     };
 
@@ -119,8 +121,6 @@ namespace elsaeedTea.Controllers
 
             }
         }
-
-
 
 
 

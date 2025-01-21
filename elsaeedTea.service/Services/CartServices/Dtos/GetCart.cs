@@ -12,8 +12,8 @@ namespace elsaeedTea.service.Services.CartServices.Dtos
         public int Id { get; set; }
         public string UserId { get; set; }
         public ApplicationUser User { get; set; }
-        public int ProductId { get; set; }
-        public ElsaeedTeaProduct Product { get; set; }
+        public int ProductDetailsId { get; set; }
+        public ElsaeedTeaProductDetails ProductDetails { get; set; }
         public int Quantity { get; set; }
     }
 }

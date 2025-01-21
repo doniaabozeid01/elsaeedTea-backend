@@ -31,6 +31,7 @@ namespace elsaeedTea.data.Context
 
         public DbSet<ElsaeedTeaProduct> TeaProduct { get; set; }
         public DbSet<ElsaeedTeaProductImage> TeaProductImages { get; set; }
+        public DbSet<ElsaeedTeaProductDetails> TeaProductDetails { get; set; }
         public DbSet<CartItem> Cart { get; set; }
         public DbSet<OrderRequest> orderRequest { get; set; }
         public DbSet<OrderItem> orderItems { get; set; }

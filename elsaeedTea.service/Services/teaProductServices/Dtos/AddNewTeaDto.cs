@@ -10,7 +10,7 @@ namespace elsaeedTea.service.Services.teaProductServices.Dtos
     {
         public string? Name { get; set; } // ابتاي 
         public string? Description { get; set; } // ليليالااي 
-        public decimal Price { get; set; }  // 1 dinar
-        public decimal Weight { get; set; } // 300 gram
+        //public decimal Price { get; set; }  // 1 dinar
+        //public decimal Weight { get; set; } // 300 gram
     }
 }

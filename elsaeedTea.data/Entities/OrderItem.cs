@@ -11,8 +11,8 @@ namespace elsaeedTea.data.Entities
         public int Id { get; set; } // معرف العنصر
         public string OrderRequestId { get; set; } // معرف الطلب
         public OrderRequest OrderRequest { get; set; } // الطلب المرتبط
-        public int ProductId { get; set; } // معرف المنتج
-        public ElsaeedTeaProduct Product { get; set; } // المنتج المرتبط
+        public int ProductDetailsId { get; set; } // معرف المنتج
+        public ElsaeedTeaProductDetails ProductDetails { get; set; } // المنتج المرتبط
         public int Quantity { get; set; } // الكمية المطلوبة
         public decimal Price { get; set; } // السعر عند الشراء
         public string UserId { get; set; } // معرف المستخدم
