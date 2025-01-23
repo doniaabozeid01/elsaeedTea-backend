@@ -23,7 +23,7 @@ namespace elsaeedTea.service.Services.teaProductServices
             _unitOfWork = unitOfWork;
             _mapper = mapper;
         }
-        public async Task<AddNewTeaDto> AddTeaDetails(AddNewTeaDto addNewTea)
+        public async Task<TeaDetailsDto> AddTeaDetails(AddNewTeaDto addNewTea)
         {
             if (addNewTea != null)
             {
@@ -42,8 +42,19 @@ namespace elsaeedTea.service.Services.teaProductServices
                     return null;
                 }
 
+                var addedTeaId = teaEntity.Id;
+
+                // إرجاع الـ id مع باقي بيانات الـ DTO أو الكائن المحفوظ
+                // يمكن إنشاء DTO جديد يحتوي على الـ id
+                return new TeaDetailsDto
+                {
+                    Id = addedTeaId,
+                    Name = addNewTea.Name,
+                    Description = addNewTea.Description,
+                    // إضافة باقي الحقول إذا لزم الأمر
+                };
+
                 // يمكن العودة بالـ DTO أو الكائن الذي تم إضافته بعد تحويله مرة أخرى إذا لزم الأمر
-                return addNewTea; // أو يمكن إنشاء AddNewTeaDto جديد من الكائن الذي تم حفظه
             }
 
             return null; // في حالة لم يتم تمرير تفاصيل الشاي

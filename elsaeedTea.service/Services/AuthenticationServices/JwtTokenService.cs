@@ -19,22 +19,27 @@ namespace elsaeedTea.service.Services.AuthenticationServices
         {
             var tokenHandler = new JwtSecurityTokenHandler();
             var key = Encoding.UTF8.GetBytes(_configuration["Jwt:Key"]);
+            var expirationDate = DateTime.UtcNow.AddYears(10); // تأكد من استخدام UTC لضمان التوافق في الزمن عبر السيرفرات
 
             var tokenDescriptor = new SecurityTokenDescriptor
             {
                 Subject = new ClaimsIdentity(new[]
-                {
-            new Claim(JwtRegisteredClaimNames.Sub, user.Id), // UserId
-            new Claim(JwtRegisteredClaimNames.Email, user.Email),
-            new Claim("FullName", user.FullName ?? string.Empty)
-        }),
-                Expires = DateTime.UtcNow.AddHours(1), // مدة صلاحية التوكن
+    {
+        new Claim(JwtRegisteredClaimNames.Sub, user.Id),
+        new Claim(JwtRegisteredClaimNames.Email, user.Email),
+        new Claim("FullName", user.FullName ?? string.Empty),
+        new Claim(JwtRegisteredClaimNames.Iss, "YourIssuer"),  // إضافة الـ Issuer
+        new Claim(JwtRegisteredClaimNames.Aud, "YourAudience")  // إضافة الـ Audience
+    }),
+                Expires = expirationDate,
                 SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
             };
 
             var token = tokenHandler.CreateToken(tokenDescriptor);
             return tokenHandler.WriteToken(token);
         }
+
+
 
 
     }

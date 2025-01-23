@@ -36,6 +36,18 @@
         }
       }
     },
+    "/api/Account/getUserId": {
+      "get": {
+        "tags": [
+          "Account"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
     "/api/Account/login": {
       "post": {
         "tags": [
@@ -667,7 +679,7 @@
         }
       }
     },
-    "/api/ProductDetails/UpdateTeaDetailsProduct": {
+    "/api/ProductDetails/UpdateTeaDetailsProduct/{id}": {
       "put": {
         "tags": [
           "ProductDetails"
@@ -675,7 +687,8 @@
         "parameters": [
           {
             "name": "id",
-            "in": "query",
+            "in": "path",
+            "required": true,
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -743,7 +756,33 @@
         ],
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/TeaDetailsDto"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/TeaDetailsDto"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/TeaDetailsDto"
+                  }
+                }
+              }
+            }
           }
         }
       }
@@ -1157,7 +1196,33 @@
         ],
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/TeaDetailsDto"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/TeaDetailsDto"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/TeaDetailsDto"
+                  }
+                }
+              }
+            }
           }
         }
       }
@@ -1891,9 +1956,15 @@
             "type": "string",
             "nullable": true
           },
+          "user": {
+            "$ref": "#/components/schemas/ApplicationUser"
+          },
           "productId": {
             "type": "integer",
             "format": "int32"
+          },
+          "product": {
+            "$ref": "#/components/schemas/ElsaeedTeaProduct"
           }
         },
         "additionalProperties": false

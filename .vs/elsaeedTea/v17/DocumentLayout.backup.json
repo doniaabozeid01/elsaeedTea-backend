@@ -3,8 +3,92 @@
   "WorkspaceRootPath": "E:\\website\\Backend\\elsaeedTea\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{9226962E-EEF0-4446-AEBD-23D0BF925369}|elsaeedTea.data\\elsaeedTea.data.csproj|e:\\website\\backend\\elsaeedtea\\elsaeedtea.data\\entities\\elsaeedteaproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9226962E-EEF0-4446-AEBD-23D0BF925369}|elsaeedTea.data\\elsaeedTea.data.csproj|solutionrelative:elsaeedtea.data\\entities\\elsaeedteaproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9226962E-EEF0-4446-AEBD-23D0BF925369}|elsaeedTea.data\\elsaeedTea.data.csproj|e:\\website\\backend\\elsaeedtea\\elsaeedtea.data\\entities\\elsaeedteaproductdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9226962E-EEF0-4446-AEBD-23D0BF925369}|elsaeedTea.data\\elsaeedTea.data.csproj|solutionrelative:elsaeedtea.data\\entities\\elsaeedteaproductdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D5C0CA34-8480-45BE-9178-6E7A30FA4F8C}|elsaeedTea.repository\\elsaeedTea.repository.csproj|e:\\website\\backend\\elsaeedtea\\elsaeedtea.repository\\interfaces\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D5C0CA34-8480-45BE-9178-6E7A30FA4F8C}|elsaeedTea.repository\\elsaeedTea.repository.csproj|solutionrelative:elsaeedtea.repository\\interfaces\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D5C0CA34-8480-45BE-9178-6E7A30FA4F8C}|elsaeedTea.repository\\elsaeedTea.repository.csproj|e:\\website\\backend\\elsaeedtea\\elsaeedtea.repository\\repositories\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D5C0CA34-8480-45BE-9178-6E7A30FA4F8C}|elsaeedTea.repository\\elsaeedTea.repository.csproj|solutionrelative:elsaeedtea.repository\\repositories\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C21DCEE7-0FF6-4F38-8509-7D36C24C172D}|elsaeedTea.service\\elsaeedTea.service.csproj|e:\\website\\backend\\elsaeedtea\\elsaeedtea.service\\services\\reviews\\dtos\\getreviewdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C21DCEE7-0FF6-4F38-8509-7D36C24C172D}|elsaeedTea.service\\elsaeedTea.service.csproj|solutionrelative:elsaeedtea.service\\services\\reviews\\dtos\\getreviewdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9226962E-EEF0-4446-AEBD-23D0BF925369}|elsaeedTea.data\\elsaeedTea.data.csproj|e:\\website\\backend\\elsaeedtea\\elsaeedtea.data\\entities\\productreviews.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9226962E-EEF0-4446-AEBD-23D0BF925369}|elsaeedTea.data\\elsaeedTea.data.csproj|solutionrelative:elsaeedtea.data\\entities\\productreviews.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C21DCEE7-0FF6-4F38-8509-7D36C24C172D}|elsaeedTea.service\\elsaeedTea.service.csproj|e:\\website\\backend\\elsaeedtea\\elsaeedtea.service\\services\\reviews\\reviewsservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C21DCEE7-0FF6-4F38-8509-7D36C24C172D}|elsaeedTea.service\\elsaeedTea.service.csproj|solutionrelative:elsaeedtea.service\\services\\reviews\\reviewsservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52E5945C-859D-477B-A03B-1D7ACACAFE48}|elsaeedTea\\elsaeedTea.csproj|e:\\website\\backend\\elsaeedtea\\elsaeedtea\\controllers\\reviewscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52E5945C-859D-477B-A03B-1D7ACACAFE48}|elsaeedTea\\elsaeedTea.csproj|solutionrelative:elsaeedtea\\controllers\\reviewscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C21DCEE7-0FF6-4F38-8509-7D36C24C172D}|elsaeedTea.service\\elsaeedTea.service.csproj|e:\\website\\backend\\elsaeedtea\\elsaeedtea.service\\services\\authenticationservices\\jwttokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C21DCEE7-0FF6-4F38-8509-7D36C24C172D}|elsaeedTea.service\\elsaeedTea.service.csproj|solutionrelative:elsaeedtea.service\\services\\authenticationservices\\jwttokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52E5945C-859D-477B-A03B-1D7ACACAFE48}|elsaeedTea\\elsaeedTea.csproj|e:\\website\\backend\\elsaeedtea\\elsaeedtea\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52E5945C-859D-477B-A03B-1D7ACACAFE48}|elsaeedTea\\elsaeedTea.csproj|solutionrelative:elsaeedtea\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{52E5945C-859D-477B-A03B-1D7ACACAFE48}|elsaeedTea\\elsaeedTea.csproj|e:\\website\\backend\\elsaeedtea\\elsaeedtea\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{52E5945C-859D-477B-A03B-1D7ACACAFE48}|elsaeedTea\\elsaeedTea.csproj|solutionrelative:elsaeedtea\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52E5945C-859D-477B-A03B-1D7ACACAFE48}|elsaeedTea\\elsaeedTea.csproj|e:\\website\\backend\\elsaeedtea\\elsaeedtea\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52E5945C-859D-477B-A03B-1D7ACACAFE48}|elsaeedTea\\elsaeedTea.csproj|solutionrelative:elsaeedtea\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C21DCEE7-0FF6-4F38-8509-7D36C24C172D}|elsaeedTea.service\\elsaeedTea.service.csproj|e:\\website\\backend\\elsaeedtea\\elsaeedtea.service\\services\\teaproductservices\\dtos\\addnewteadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C21DCEE7-0FF6-4F38-8509-7D36C24C172D}|elsaeedTea.service\\elsaeedTea.service.csproj|solutionrelative:elsaeedtea.service\\services\\teaproductservices\\dtos\\addnewteadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C21DCEE7-0FF6-4F38-8509-7D36C24C172D}|elsaeedTea.service\\elsaeedTea.service.csproj|e:\\website\\backend\\elsaeedtea\\elsaeedtea.service\\services\\teadetailsservices\\dtos\\getteadetailsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C21DCEE7-0FF6-4F38-8509-7D36C24C172D}|elsaeedTea.service\\elsaeedTea.service.csproj|solutionrelative:elsaeedtea.service\\services\\teadetailsservices\\dtos\\getteadetailsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C21DCEE7-0FF6-4F38-8509-7D36C24C172D}|elsaeedTea.service\\elsaeedTea.service.csproj|e:\\website\\backend\\elsaeedtea\\elsaeedtea.service\\services\\authenticationservices\\ijwttokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C21DCEE7-0FF6-4F38-8509-7D36C24C172D}|elsaeedTea.service\\elsaeedTea.service.csproj|solutionrelative:elsaeedtea.service\\services\\authenticationservices\\ijwttokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C21DCEE7-0FF6-4F38-8509-7D36C24C172D}|elsaeedTea.service\\elsaeedTea.service.csproj|e:\\website\\backend\\elsaeedtea\\elsaeedtea.service\\services\\teadetailsservices\\dtos\\addteadetailsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C21DCEE7-0FF6-4F38-8509-7D36C24C172D}|elsaeedTea.service\\elsaeedTea.service.csproj|solutionrelative:elsaeedtea.service\\services\\teadetailsservices\\dtos\\addteadetailsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52E5945C-859D-477B-A03B-1D7ACACAFE48}|elsaeedTea\\elsaeedTea.csproj|e:\\website\\backend\\elsaeedtea\\elsaeedtea\\controllers\\productdetailscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52E5945C-859D-477B-A03B-1D7ACACAFE48}|elsaeedTea\\elsaeedTea.csproj|solutionrelative:elsaeedtea\\controllers\\productdetailscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52E5945C-859D-477B-A03B-1D7ACACAFE48}|elsaeedTea\\elsaeedTea.csproj|e:\\website\\backend\\elsaeedtea\\elsaeedtea\\controllers\\teaimagescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52E5945C-859D-477B-A03B-1D7ACACAFE48}|elsaeedTea\\elsaeedTea.csproj|solutionrelative:elsaeedtea\\controllers\\teaimagescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52E5945C-859D-477B-A03B-1D7ACACAFE48}|elsaeedTea\\elsaeedTea.csproj|e:\\website\\backend\\elsaeedtea\\elsaeedtea\\controllers\\teacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52E5945C-859D-477B-A03B-1D7ACACAFE48}|elsaeedTea\\elsaeedTea.csproj|solutionrelative:elsaeedtea\\controllers\\teacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C21DCEE7-0FF6-4F38-8509-7D36C24C172D}|elsaeedTea.service\\elsaeedTea.service.csproj|e:\\website\\backend\\elsaeedtea\\elsaeedtea.service\\services\\teaproductservices\\teaservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C21DCEE7-0FF6-4F38-8509-7D36C24C172D}|elsaeedTea.service\\elsaeedTea.service.csproj|solutionrelative:elsaeedtea.service\\services\\teaproductservices\\teaservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C21DCEE7-0FF6-4F38-8509-7D36C24C172D}|elsaeedTea.service\\elsaeedTea.service.csproj|e:\\website\\backend\\elsaeedtea\\elsaeedtea.service\\services\\teaproductservices\\dtos\\teadetailsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C21DCEE7-0FF6-4F38-8509-7D36C24C172D}|elsaeedTea.service\\elsaeedTea.service.csproj|solutionrelative:elsaeedtea.service\\services\\teaproductservices\\dtos\\teadetailsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C21DCEE7-0FF6-4F38-8509-7D36C24C172D}|elsaeedTea.service\\elsaeedTea.service.csproj|e:\\website\\backend\\elsaeedtea\\elsaeedtea.service\\services\\teaproductservices\\iteaservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C21DCEE7-0FF6-4F38-8509-7D36C24C172D}|elsaeedTea.service\\elsaeedTea.service.csproj|solutionrelative:elsaeedtea.service\\services\\teaproductservices\\iteaservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{52E5945C-859D-477B-A03B-1D7ACACAFE48}|elsaeedTea\\elsaeedTea.csproj|e:\\website\\backend\\elsaeedtea\\elsaeedtea\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
@@ -22,11 +106,279 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ElsaeedTeaProduct.cs",
+              "DocumentMoniker": "E:\\website\\Backend\\elsaeedTea\\elsaeedTea.data\\Entities\\ElsaeedTeaProduct.cs",
+              "RelativeDocumentMoniker": "elsaeedTea.data\\Entities\\ElsaeedTeaProduct.cs",
+              "ToolTip": "E:\\website\\Backend\\elsaeedTea\\elsaeedTea.data\\Entities\\ElsaeedTeaProduct.cs",
+              "RelativeToolTip": "elsaeedTea.data\\Entities\\ElsaeedTeaProduct.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAByAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-23T23:38:53.85Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "ElsaeedTeaProductDetails.cs",
+              "DocumentMoniker": "E:\\website\\Backend\\elsaeedTea\\elsaeedTea.data\\Entities\\ElsaeedTeaProductDetails.cs",
+              "RelativeDocumentMoniker": "elsaeedTea.data\\Entities\\ElsaeedTeaProductDetails.cs",
+              "ToolTip": "E:\\website\\Backend\\elsaeedTea\\elsaeedTea.data\\Entities\\ElsaeedTeaProductDetails.cs",
+              "RelativeToolTip": "elsaeedTea.data\\Entities\\ElsaeedTeaProductDetails.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-23T23:38:51.501Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IGenericRepository.cs",
+              "DocumentMoniker": "E:\\website\\Backend\\elsaeedTea\\elsaeedTea.repository\\Interfaces\\IGenericRepository.cs",
+              "RelativeDocumentMoniker": "elsaeedTea.repository\\Interfaces\\IGenericRepository.cs",
+              "ToolTip": "E:\\website\\Backend\\elsaeedTea\\elsaeedTea.repository\\Interfaces\\IGenericRepository.cs",
+              "RelativeToolTip": "elsaeedTea.repository\\Interfaces\\IGenericRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-23T22:12:13.748Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "GetReviewDto.cs",
+              "DocumentMoniker": "E:\\website\\Backend\\elsaeedTea\\elsaeedTea.service\\Services\\Reviews\\Dtos\\GetReviewDto.cs",
+              "RelativeDocumentMoniker": "elsaeedTea.service\\Services\\Reviews\\Dtos\\GetReviewDto.cs",
+              "ToolTip": "E:\\website\\Backend\\elsaeedTea\\elsaeedTea.service\\Services\\Reviews\\Dtos\\GetReviewDto.cs",
+              "RelativeToolTip": "elsaeedTea.service\\Services\\Reviews\\Dtos\\GetReviewDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-23T22:11:02.221Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ProductReviews.cs",
+              "DocumentMoniker": "E:\\website\\Backend\\elsaeedTea\\elsaeedTea.data\\Entities\\ProductReviews.cs",
+              "RelativeDocumentMoniker": "elsaeedTea.data\\Entities\\ProductReviews.cs",
+              "ToolTip": "E:\\website\\Backend\\elsaeedTea\\elsaeedTea.data\\Entities\\ProductReviews.cs",
+              "RelativeToolTip": "elsaeedTea.data\\Entities\\ProductReviews.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-23T22:10:55.029Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ReviewsServices.cs",
+              "DocumentMoniker": "E:\\website\\Backend\\elsaeedTea\\elsaeedTea.service\\Services\\Reviews\\ReviewsServices.cs",
+              "RelativeDocumentMoniker": "elsaeedTea.service\\Services\\Reviews\\ReviewsServices.cs",
+              "ToolTip": "E:\\website\\Backend\\elsaeedTea\\elsaeedTea.service\\Services\\Reviews\\ReviewsServices.cs",
+              "RelativeToolTip": "elsaeedTea.service\\Services\\Reviews\\ReviewsServices.cs",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAwwDwAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-23T22:10:12.19Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "JwtTokenService.cs",
+              "DocumentMoniker": "E:\\website\\Backend\\elsaeedTea\\elsaeedTea.service\\Services\\AuthenticationServices\\JwtTokenService.cs",
+              "RelativeDocumentMoniker": "elsaeedTea.service\\Services\\AuthenticationServices\\JwtTokenService.cs",
+              "ToolTip": "E:\\website\\Backend\\elsaeedTea\\elsaeedTea.service\\Services\\AuthenticationServices\\JwtTokenService.cs",
+              "RelativeToolTip": "elsaeedTea.service\\Services\\AuthenticationServices\\JwtTokenService.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAkwBgAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-23T20:43:14.602Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "TeaServices.cs",
+              "DocumentMoniker": "E:\\website\\Backend\\elsaeedTea\\elsaeedTea.service\\Services\\teaProductServices\\TeaServices.cs",
+              "RelativeDocumentMoniker": "elsaeedTea.service\\Services\\teaProductServices\\TeaServices.cs",
+              "ToolTip": "E:\\website\\Backend\\elsaeedTea\\elsaeedTea.service\\Services\\teaProductServices\\TeaServices.cs",
+              "RelativeToolTip": "elsaeedTea.service\\Services\\teaProductServices\\TeaServices.cs",
+              "ViewState": "AgIAADsAAAAAAAAAAAAiwFQAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-22T18:06:28.648Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "TeaDetailsDto.cs",
+              "DocumentMoniker": "E:\\website\\Backend\\elsaeedTea\\elsaeedTea.service\\Services\\teaProductServices\\Dtos\\TeaDetailsDto.cs",
+              "RelativeDocumentMoniker": "elsaeedTea.service\\Services\\teaProductServices\\Dtos\\TeaDetailsDto.cs",
+              "ToolTip": "E:\\website\\Backend\\elsaeedTea\\elsaeedTea.service\\Services\\teaProductServices\\Dtos\\TeaDetailsDto.cs",
+              "RelativeToolTip": "elsaeedTea.service\\Services\\teaProductServices\\Dtos\\TeaDetailsDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAABNAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-22T18:04:43.943Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "IJwtTokenService.cs",
+              "DocumentMoniker": "E:\\website\\Backend\\elsaeedTea\\elsaeedTea.service\\Services\\AuthenticationServices\\IJwtTokenService.cs",
+              "RelativeDocumentMoniker": "elsaeedTea.service\\Services\\AuthenticationServices\\IJwtTokenService.cs",
+              "ToolTip": "E:\\website\\Backend\\elsaeedTea\\elsaeedTea.service\\Services\\AuthenticationServices\\IJwtTokenService.cs",
+              "RelativeToolTip": "elsaeedTea.service\\Services\\AuthenticationServices\\IJwtTokenService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-23T20:51:56.469Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "E:\\website\\Backend\\elsaeedTea\\elsaeedTea\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "elsaeedTea\\Controllers\\AccountController.cs",
+              "ToolTip": "E:\\website\\Backend\\elsaeedTea\\elsaeedTea\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "elsaeedTea\\Controllers\\AccountController.cs",
+              "ViewState": "AgIAAKwAAAAAAAAAAAAswMMAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-23T20:45:22.68Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "GenericRepository.cs",
+              "DocumentMoniker": "E:\\website\\Backend\\elsaeedTea\\elsaeedTea.repository\\Repositories\\GenericRepository.cs",
+              "RelativeDocumentMoniker": "elsaeedTea.repository\\Repositories\\GenericRepository.cs",
+              "ToolTip": "E:\\website\\Backend\\elsaeedTea\\elsaeedTea.repository\\Repositories\\GenericRepository.cs",
+              "RelativeToolTip": "elsaeedTea.repository\\Repositories\\GenericRepository.cs",
+              "ViewState": "AgIAACgAAAAAAAAAAAAcwD0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-22T22:54:37.374Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "AddNewTeaDto.cs",
+              "DocumentMoniker": "E:\\website\\Backend\\elsaeedTea\\elsaeedTea.service\\Services\\teaProductServices\\Dtos\\AddNewTeaDto.cs",
+              "RelativeDocumentMoniker": "elsaeedTea.service\\Services\\teaProductServices\\Dtos\\AddNewTeaDto.cs",
+              "ToolTip": "E:\\website\\Backend\\elsaeedTea\\elsaeedTea.service\\Services\\teaProductServices\\Dtos\\AddNewTeaDto.cs",
+              "RelativeToolTip": "elsaeedTea.service\\Services\\teaProductServices\\Dtos\\AddNewTeaDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-22T19:10:06.07Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\website\\Backend\\elsaeedTea\\elsaeedTea\\Program.cs",
+              "RelativeDocumentMoniker": "elsaeedTea\\Program.cs",
+              "ToolTip": "E:\\website\\Backend\\elsaeedTea\\elsaeedTea\\Program.cs",
+              "RelativeToolTip": "elsaeedTea\\Program.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAAACEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-22T18:38:36.091Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "E:\\website\\Backend\\elsaeedTea\\elsaeedTea\\appsettings.json",
+              "RelativeDocumentMoniker": "elsaeedTea\\appsettings.json",
+              "ToolTip": "E:\\website\\Backend\\elsaeedTea\\elsaeedTea\\appsettings.json",
+              "RelativeToolTip": "elsaeedTea\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-01-21T22:57:16.179Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ReviewsController.cs",
+              "DocumentMoniker": "E:\\website\\Backend\\elsaeedTea\\elsaeedTea\\Controllers\\ReviewsController.cs",
+              "RelativeDocumentMoniker": "elsaeedTea\\Controllers\\ReviewsController.cs",
+              "ToolTip": "E:\\website\\Backend\\elsaeedTea\\elsaeedTea\\Controllers\\ReviewsController.cs",
+              "RelativeToolTip": "elsaeedTea\\Controllers\\ReviewsController.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAgwCAAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-23T16:45:54.762Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "GetTeaDetailsDto.cs",
+              "DocumentMoniker": "E:\\website\\Backend\\elsaeedTea\\elsaeedTea.service\\Services\\TeaDetailsServices\\Dtos\\GetTeaDetailsDto.cs",
+              "RelativeDocumentMoniker": "elsaeedTea.service\\Services\\TeaDetailsServices\\Dtos\\GetTeaDetailsDto.cs",
+              "ToolTip": "E:\\website\\Backend\\elsaeedTea\\elsaeedTea.service\\Services\\TeaDetailsServices\\Dtos\\GetTeaDetailsDto.cs",
+              "RelativeToolTip": "elsaeedTea.service\\Services\\TeaDetailsServices\\Dtos\\GetTeaDetailsDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-23T16:43:06.224Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "ITeaServices.cs",
+              "DocumentMoniker": "E:\\website\\Backend\\elsaeedTea\\elsaeedTea.service\\Services\\teaProductServices\\ITeaServices.cs",
+              "RelativeDocumentMoniker": "elsaeedTea.service\\Services\\teaProductServices\\ITeaServices.cs",
+              "ToolTip": "E:\\website\\Backend\\elsaeedTea\\elsaeedTea.service\\Services\\teaProductServices\\ITeaServices.cs",
+              "RelativeToolTip": "elsaeedTea.service\\Services\\teaProductServices\\ITeaServices.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-22T18:10:33.743Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "ProductDetailsController.cs",
+              "DocumentMoniker": "E:\\website\\Backend\\elsaeedTea\\elsaeedTea\\Controllers\\ProductDetailsController.cs",
+              "RelativeDocumentMoniker": "elsaeedTea\\Controllers\\ProductDetailsController.cs",
+              "ToolTip": "E:\\website\\Backend\\elsaeedTea\\elsaeedTea\\Controllers\\ProductDetailsController.cs",
+              "RelativeToolTip": "elsaeedTea\\Controllers\\ProductDetailsController.cs",
+              "ViewState": "AgIAAKkAAAAAAAAAAADwv9gAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-22T17:49:12.302Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "AddTeaDetailsDto.cs",
+              "DocumentMoniker": "E:\\website\\Backend\\elsaeedTea\\elsaeedTea.service\\Services\\TeaDetailsServices\\Dtos\\AddTeaDetailsDto.cs",
+              "RelativeDocumentMoniker": "elsaeedTea.service\\Services\\TeaDetailsServices\\Dtos\\AddTeaDetailsDto.cs",
+              "ToolTip": "E:\\website\\Backend\\elsaeedTea\\elsaeedTea.service\\Services\\TeaDetailsServices\\Dtos\\AddTeaDetailsDto.cs",
+              "RelativeToolTip": "elsaeedTea.service\\Services\\TeaDetailsServices\\Dtos\\AddTeaDetailsDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-23T16:43:07.062Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "TeaImagesController.cs",
+              "DocumentMoniker": "E:\\website\\Backend\\elsaeedTea\\elsaeedTea\\Controllers\\TeaImagesController.cs",
+              "RelativeDocumentMoniker": "elsaeedTea\\Controllers\\TeaImagesController.cs",
+              "ToolTip": "E:\\website\\Backend\\elsaeedTea\\elsaeedTea\\Controllers\\TeaImagesController.cs",
+              "RelativeToolTip": "elsaeedTea\\Controllers\\TeaImagesController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-23T18:13:35.154Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "TeaController.cs",
+              "DocumentMoniker": "E:\\website\\Backend\\elsaeedTea\\elsaeedTea\\Controllers\\TeaController.cs",
+              "RelativeDocumentMoniker": "elsaeedTea\\Controllers\\TeaController.cs",
+              "ToolTip": "E:\\website\\Backend\\elsaeedTea\\elsaeedTea\\Controllers\\TeaController.cs",
+              "RelativeToolTip": "elsaeedTea\\Controllers\\TeaController.cs",
+              "ViewState": "AgIAAOMAAAAAAAAAAAAiwPYAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-22T17:48:40.348Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
               "Title": "appsettings.Development.json",
               "DocumentMoniker": "E:\\website\\Backend\\elsaeedTea\\elsaeedTea\\appsettings.Development.json",
               "RelativeDocumentMoniker": "elsaeedTea\\appsettings.Development.json",
@@ -38,20 +390,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "E:\\website\\Backend\\elsaeedTea\\elsaeedTea\\appsettings.json",
-              "RelativeDocumentMoniker": "elsaeedTea\\appsettings.json",
-              "ToolTip": "E:\\website\\Backend\\elsaeedTea\\elsaeedTea\\appsettings.json",
-              "RelativeToolTip": "elsaeedTea\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAByAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-01-21T22:57:16.179Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 23,
               "Title": "ElsaeedTeaDbContext.cs",
               "DocumentMoniker": "E:\\website\\Backend\\elsaeedTea\\elsaeedTea.data\\Context\\ElsaeedTeaDbContext.cs",
               "RelativeDocumentMoniker": "elsaeedTea.data\\Context\\ElsaeedTeaDbContext.cs",

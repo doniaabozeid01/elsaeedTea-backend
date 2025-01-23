@@ -208,7 +208,7 @@ namespace elsaeedTea.Controllers
 
 
         [HttpDelete("DeleteTeaProduct/{id}")]
-        public async Task<ActionResult> DeleteTeaProduct(int id)
+        public async Task<ActionResult<IReadOnlyList<TeaDetailsDto>>> DeleteTeaProduct(int id)
         {
             try
             {
@@ -234,8 +234,9 @@ namespace elsaeedTea.Controllers
 
                 }
 
+                var AllProducts = await _teaServices.GetAllTeaDetails();
                 // إرسال الاستجابة الناجحة مع البيانات
-                return Ok($"Tea With Id {id} deleted Successfully");
+                return Ok(AllProducts);
             }
             catch (Exception ex)
             {

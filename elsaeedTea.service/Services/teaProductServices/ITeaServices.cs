@@ -10,7 +10,7 @@ namespace elsaeedTea.service.Services.teaProductServices
 
         Task<IReadOnlyList<TeaDetailsDto>> GetAllTeaDetails();
         //Task<IReadOnlyList<TeaDetailsDto>> GetAllTeaImages();
-        Task<AddNewTeaDto> AddTeaDetails(AddNewTeaDto addNewTea);
+        Task<TeaDetailsDto> AddTeaDetails(AddNewTeaDto addNewTea);
         Task<TeaDetailsDto> UpdateTea(int id, AddNewTeaDto addNewTea);
         Task<int> DeleteTea(int id);
         Task<IReadOnlyList<TeaDetailsDto>> GetDetailsByProductId(int id);

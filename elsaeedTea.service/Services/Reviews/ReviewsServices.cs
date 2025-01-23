@@ -60,7 +60,7 @@ namespace elsaeedTea.service.Services.Reviews
 
         public async Task<IReadOnlyList<GetReviewDto>> GetAllReviews()
         {
-            var reviews = await _unitOfWork.Repository<ProductReviews>().GetAllAsync();
+            var reviews = await _unitOfWork.Repository<ProductReviews>().GetAllReviewsAsync();
             if (reviews.Any()) // يعني فيه عالاقل تقييم واحد او بمعني تاني فيه تقييمات 
             {
                 var mappedReviews = _mapper.Map<IReadOnlyList<GetReviewDto>>(reviews);

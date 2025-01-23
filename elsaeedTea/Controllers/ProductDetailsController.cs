@@ -157,8 +157,8 @@ namespace elsaeedTea.Controllers
 
 
 
-        [HttpPut("UpdateTeaDetailsProduct")]
-        public async Task<ActionResult<GetTeaDetailsDto>> UpdateTeaDetailsProduct(int id, AddTeaDetailsDto teaDto)
+        [HttpPut("UpdateTeaDetailsProduct/{id}")]
+        public async Task<ActionResult<GetTeaDetailsDto>> UpdateTeaDetailsProduct(int id,AddTeaDetailsDto teaDto)
         {
             try
             {
@@ -214,7 +214,7 @@ namespace elsaeedTea.Controllers
 
 
         [HttpDelete("DeleteTeaDetailsProduct/{id}")]
-        public async Task<ActionResult> DeleteTeaDetailsProduct(int id)
+        public async Task<ActionResult<IReadOnlyList<TeaDetailsDto>>> DeleteTeaDetailsProduct(int id)
         {
             try
             {
@@ -240,8 +240,9 @@ namespace elsaeedTea.Controllers
 
                 }
 
+                var productsDetails = await _teaServices.GetAllTeaDetails();
                 // إرسال الاستجابة الناجحة مع البيانات
-                return Ok($"Tea details With Id {id} deleted Successfully");
+                return Ok(productsDetails);
             }
             catch (Exception ex)
             {

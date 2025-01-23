@@ -1,0 +1,15 @@
+E:\website\Backend\elsaeedTea\elsaeedTea.data\bin\Release\net6.0\elsaeedTea.data.deps.json
+E:\website\Backend\elsaeedTea\elsaeedTea.data\bin\Release\net6.0\elsaeedTea.data.runtimeconfig.json
+E:\website\Backend\elsaeedTea\elsaeedTea.data\bin\Release\net6.0\elsaeedTea.data.dll
+E:\website\Backend\elsaeedTea\elsaeedTea.data\bin\Release\net6.0\elsaeedTea.data.pdb
+E:\website\Backend\elsaeedTea\elsaeedTea.data\obj\Release\net6.0\elsaeedTea.data.csproj.AssemblyReference.cache
+E:\website\Backend\elsaeedTea\elsaeedTea.data\obj\Release\net6.0\elsaeedTea.data.GeneratedMSBuildEditorConfig.editorconfig
+E:\website\Backend\elsaeedTea\elsaeedTea.data\obj\Release\net6.0\elsaeedTea.data.AssemblyInfoInputs.cache
+E:\website\Backend\elsaeedTea\elsaeedTea.data\obj\Release\net6.0\elsaeedTea.data.AssemblyInfo.cs
+E:\website\Backend\elsaeedTea\elsaeedTea.data\obj\Release\net6.0\elsaeedTea.data.csproj.CoreCompileInputs.cache
+E:\website\Backend\elsaeedTea\elsaeedTea.data\obj\Release\net6.0\elsaeedTea.data.sourcelink.json
+E:\website\Backend\elsaeedTea\elsaeedTea.data\obj\Release\net6.0\elsaeedTea.data.dll
+E:\website\Backend\elsaeedTea\elsaeedTea.data\obj\Release\net6.0\refint\elsaeedTea.data.dll
+E:\website\Backend\elsaeedTea\elsaeedTea.data\obj\Release\net6.0\elsaeedTea.data.pdb
+E:\website\Backend\elsaeedTea\elsaeedTea.data\obj\Release\net6.0\elsaeedTea.data.genruntimeconfig.cache
+E:\website\Backend\elsaeedTea\elsaeedTea.data\obj\Release\net6.0\ref\elsaeedTea.data.dll

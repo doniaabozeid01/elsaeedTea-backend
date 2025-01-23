@@ -33,6 +33,16 @@
   },
   {
     "ContainingType": "elsaeedTea.Controllers.AccountController",
+    "Method": "GetUserIdFromToken",
+    "RelativePath": "api/Account/getUserId",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "elsaeedTea.Controllers.AccountController",
     "Method": "Login",
     "RelativePath": "api/Account/login",
     "HttpMethod": "POST",
@@ -352,7 +362,17 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": []
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IReadOnlyList\u00601[[elsaeedTea.service.Services.teaProductServices.Dtos.TeaDetailsDto, elsaeedTea.service, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
     "ContainingType": "elsaeedTea.Controllers.ProductDetailsController",
@@ -403,7 +423,7 @@
   {
     "ContainingType": "elsaeedTea.Controllers.ProductDetailsController",
     "Method": "UpdateTeaDetailsProduct",
-    "RelativePath": "api/ProductDetails/UpdateTeaDetailsProduct",
+    "RelativePath": "api/ProductDetails/UpdateTeaDetailsProduct/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -411,7 +431,7 @@
       {
         "Name": "id",
         "Type": "System.Int32",
-        "IsRequired": false
+        "IsRequired": true
       },
       {
         "Name": "teaDto",
@@ -590,7 +610,17 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": []
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IReadOnlyList\u00601[[elsaeedTea.service.Services.teaProductServices.Dtos.TeaDetailsDto, elsaeedTea.service, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
     "ContainingType": "elsaeedTea.Controllers.TeaController",

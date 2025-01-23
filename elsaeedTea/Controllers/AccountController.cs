@@ -1,8 +1,10 @@
-﻿using elsaeedTea.data.Entities;
+﻿using System.Security.Claims;
+using elsaeedTea.data.Entities;
 using elsaeedTea.service.Services.AuthenticationServices;
 using elsaeedTea.service.Services.AuthenticationServices.Dtos;
 using elsaeedTea.service.Services.EmailServices;
 using elsaeedTea.service.Services.EmailServices.Dtos;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -108,6 +110,27 @@ namespace elsaeedTea.Controllers
         }
 
 
+        [HttpGet("getUserId")]
+        [Authorize]
+        public IActionResult GetUserIdFromToken()
+        {
+            try
+            {
+                // استخراج userId مباشرة من Claims
+                var userId = User.FindFirst("sub")?.Value;
+
+                if (string.IsNullOrEmpty(userId))
+                {
+                    return Unauthorized("Invalid token or user not found.");
+                }
+
+                return Ok(new { UserId = userId });
+            }
+            catch (Exception ex)
+            {
+                return BadRequest($"Error extracting userId from token: {ex.Message}");
+            }
+        }
 
         //احتمال كبير منستخدمهاش 
         //[HttpPost("adminRegister")]

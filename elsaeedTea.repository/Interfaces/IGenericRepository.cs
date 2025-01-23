@@ -23,6 +23,7 @@ namespace elsaeedTea.repository.Interfaces
         Task<IReadOnlyList<ElsaeedTeaProduct>> GetAllTeaAsync();
 
 
+        Task<IReadOnlyList<ProductReviews>> GetAllReviewsAsync();
 
         Task<IReadOnlyList<CartItem>> GetAllCartsAsync();
         Task<CartItem> GetCartByIdAsync(int id);

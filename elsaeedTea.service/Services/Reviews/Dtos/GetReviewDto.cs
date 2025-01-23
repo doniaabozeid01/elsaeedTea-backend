@@ -15,8 +15,8 @@ namespace elsaeedTea.service.Services.Reviews.Dtos
         public DateTime? CreatedAt { get; set; } = DateTime.Now;
         public DateTime? UpdatedAt { get; set; } = DateTime.Now;
         public string UserId { get; set; }
-        //public ApplicationUser User { get; set; }
+        public ApplicationUser User { get; set; }
         public int ProductId { get; set; }
-        //public ElsaeedTeaProduct Product { get; set; }
+        public ElsaeedTeaProduct Product { get; set; }
     }
 }

@@ -56,7 +56,12 @@ namespace elsaeedTea.repository.Repositories
 
         public async Task<IReadOnlyList<ElsaeedTeaProduct>> GetAllTeaAsync()
         {
-            return await _context.Set<ElsaeedTeaProduct>().Include(x => x.Images).ToListAsync();
+            return await _context.Set<ElsaeedTeaProduct>().Include(x => x.Images).Include(x => x.Details).ToListAsync();
+        }
+
+        public async Task<IReadOnlyList<ProductReviews>> GetAllReviewsAsync()
+        {
+            return await _context.Set<ProductReviews>().Include(x => x.User).Include(x => x.Product).ToListAsync();
         }
 
         public async Task<ElsaeedTeaProduct> GetTeaByIdAsync(int id)
