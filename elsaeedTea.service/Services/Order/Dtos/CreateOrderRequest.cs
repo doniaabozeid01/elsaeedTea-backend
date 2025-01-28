@@ -11,7 +11,8 @@ namespace elsaeedTea.service.Services.Order.Dtos
         public string UserId { get; set; } // معرف المستخدم
         public string PaymentMethod { get; set; } // طريقة الدفع
         public string Country { get; set; } // البلد
-        public string Governorate { get; set; } // المحافظة
+        public string City { get; set; } // المحافظة
+        public string Address { get; set; } // المحافظة
         public string PhoneNumber { get; set; } // رقم الهاتف
     }
 }

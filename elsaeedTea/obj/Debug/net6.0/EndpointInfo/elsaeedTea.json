@@ -48,6 +48,18 @@
         }
       }
     },
+    "/api/Account/getFullName": {
+      "get": {
+        "tags": [
+          "Account"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
     "/api/Account/login": {
       "post": {
         "tags": [
@@ -72,6 +84,18 @@
             }
           }
         },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Account/secure-data": {
+      "get": {
+        "tags": [
+          "Account"
+        ],
         "responses": {
           "200": {
             "description": "Success"
@@ -250,6 +274,45 @@
         }
       }
     },
+    "/api/Cart/GetCartByUserId/{id}": {
+      "get": {
+        "tags": [
+          "Cart"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/TeaDetailsDto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TeaDetailsDto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TeaDetailsDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/Cart/AddCart": {
       "post": {
         "tags": [
@@ -298,7 +361,7 @@
         }
       }
     },
-    "/api/Cart/UpdateCart": {
+    "/api/Cart/UpdateCart/{id}": {
       "put": {
         "tags": [
           "Cart"
@@ -306,7 +369,8 @@
         "parameters": [
           {
             "name": "id",
-            "in": "query",
+            "in": "path",
+            "required": true,
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -515,7 +579,7 @@
         }
       }
     },
-    "/api/Payment/GetOrdersByUserId": {
+    "/api/Payment/GetOrdersByUserId/{id}": {
       "get": {
         "tags": [
           "Payment"
@@ -523,7 +587,47 @@
         "parameters": [
           {
             "name": "id",
-            "in": "query",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetOrderRequest"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetOrderRequest"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetOrderRequest"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Payment/GetOrderItemsByOrderRequestId/{id}": {
+      "get": {
+        "tags": [
+          "Payment"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
             "schema": {
               "type": "string"
             }
@@ -1750,7 +1854,11 @@
             "type": "string",
             "nullable": true
           },
-          "governorate": {
+          "city": {
+            "type": "string",
+            "nullable": true
+          },
+          "address": {
             "type": "string",
             "nullable": true
           },
@@ -1903,7 +2011,11 @@
             "type": "string",
             "nullable": true
           },
-          "governorate": {
+          "city": {
+            "type": "string",
+            "nullable": true
+          },
+          "address": {
             "type": "string",
             "nullable": true
           },
@@ -2042,7 +2154,11 @@
             "type": "string",
             "nullable": true
           },
-          "governorate": {
+          "city": {
+            "type": "string",
+            "nullable": true
+          },
+          "address": {
             "type": "string",
             "nullable": true
           },

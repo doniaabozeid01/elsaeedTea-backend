@@ -18,5 +18,8 @@ namespace elsaeedTea.service.Services.Order
 
         Task<IReadOnlyList<GetOrderRequest>> GetAllOrdersByUserId(string id);
 
+        Task<IReadOnlyList<GetOrderItems>> GetOrderItemsByOrderRequestId(string id);
+
+
     }
 }

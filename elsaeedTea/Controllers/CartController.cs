@@ -101,6 +101,38 @@ namespace elsaeedTea.Controllers
 
 
 
+        [HttpGet("GetCartByUserId/{id}")]
+        public async Task<ActionResult<TeaDetailsDto>> GetCartByUserId(string id)
+        {
+            try
+            {
+
+
+                if (id == null)
+                {
+                    return BadRequest("Invalid User Id");
+                }
+                // الحصول على جميع تفاصيل الشاي
+                var cart = await _cartServices.GetCartByUserId(id);
+
+                // التحقق إذا كانت البيانات فارغة
+                if (cart == null)
+                {
+                    // إرسال استجابة فارغة مع حالة 404 (Not Found)
+                    return NotFound("No cart found.");
+                }
+
+                // إرسال الاستجابة الناجحة مع البيانات
+                return Ok(cart);
+            }
+            catch (Exception ex)
+            {
+                // في حالة حدوث استثناء أثناء تنفيذ الكود
+                // يمكنك تسجيل الخطأ أو إضافة تفاصيل إضافية هنا
+                return StatusCode(500, $"Internal server error: {ex.Message}");
+            }
+        }
+
 
 
 
@@ -173,7 +205,7 @@ namespace elsaeedTea.Controllers
 
 
 
-        [HttpPut("UpdateCart")]
+        [HttpPut("UpdateCart/{id}")]
         public async Task<ActionResult<GetCart>> UpdateCart(int id, AddCart cartDto)
         {
             try
@@ -264,7 +296,6 @@ namespace elsaeedTea.Controllers
                     return NotFound("Failed to delete cart from the database .");
 
                 }
-
                 // إرسال الاستجابة الناجحة مع البيانات
                 return Ok($"Cart With Id {id} deleted Successfully");
             }

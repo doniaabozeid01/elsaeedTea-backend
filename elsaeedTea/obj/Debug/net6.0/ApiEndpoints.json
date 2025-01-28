@@ -33,7 +33,17 @@
   },
   {
     "ContainingType": "elsaeedTea.Controllers.AccountController",
-    "Method": "GetUserIdFromToken",
+    "Method": "GetFullName",
+    "RelativePath": "api/Account/getFullName",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "elsaeedTea.Controllers.AccountController",
+    "Method": "GetUserId",
     "RelativePath": "api/Account/getUserId",
     "HttpMethod": "GET",
     "IsController": true,
@@ -71,6 +81,16 @@
         "IsRequired": true
       }
     ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "elsaeedTea.Controllers.AccountController",
+    "Method": "GetSecureData",
+    "RelativePath": "api/Account/secure-data",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": []
   },
   {
@@ -179,8 +199,34 @@
   },
   {
     "ContainingType": "elsaeedTea.Controllers.CartController",
+    "Method": "GetCartByUserId",
+    "RelativePath": "api/Cart/GetCartByUserId/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "elsaeedTea.service.Services.teaProductServices.Dtos.TeaDetailsDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "elsaeedTea.Controllers.CartController",
     "Method": "UpdateCart",
-    "RelativePath": "api/Cart/UpdateCart",
+    "RelativePath": "api/Cart/UpdateCart/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -188,7 +234,7 @@
       {
         "Name": "id",
         "Type": "System.Int32",
-        "IsRequired": false
+        "IsRequired": true
       },
       {
         "Name": "cartDto",
@@ -298,8 +344,8 @@
   },
   {
     "ContainingType": "elsaeedTea.Controllers.PaymentController",
-    "Method": "GetOrdersByUserId",
-    "RelativePath": "api/Payment/GetOrdersByUserId",
+    "Method": "GetOrderItemsByOrderRequestId",
+    "RelativePath": "api/Payment/GetOrderItemsByOrderRequestId/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -307,7 +353,33 @@
       {
         "Name": "id",
         "Type": "System.String",
-        "IsRequired": false
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "elsaeedTea.service.Services.Order.Dtos.GetOrderRequest",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "elsaeedTea.Controllers.PaymentController",
+    "Method": "GetOrdersByUserId",
+    "RelativePath": "api/Payment/GetOrdersByUserId/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": [

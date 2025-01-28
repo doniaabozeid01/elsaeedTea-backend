@@ -1,4 +1,4 @@
-using elsaeedTea.data.Context;
+﻿using elsaeedTea.data.Context;
 using elsaeedTea.data.Entities;
 using elsaeedTea.repository.Interfaces;
 using elsaeedTea.repository.Repositories;
@@ -45,6 +45,26 @@ builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>
     .AddDefaultTokenProviders();
 
 // ????? JWT Authentication
+//builder.Services.AddAuthentication(options =>
+//{
+//    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+//    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+//})
+//.AddJwtBearer(options =>
+//{
+//    options.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters
+//    {
+//        ValidateIssuer = true,
+//        ValidateAudience = true,
+//        ValidateLifetime = true,
+//        ValidateIssuerSigningKey = true,
+//        ValidIssuer = "YourIssuer",
+//        ValidAudience = "YourIssuer",
+//        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]))
+//    };
+//});
+
+
 builder.Services.AddAuthentication(options =>
 {
     options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -52,17 +72,20 @@ builder.Services.AddAuthentication(options =>
 })
 .AddJwtBearer(options =>
 {
-    options.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters
+    options.TokenValidationParameters = new TokenValidationParameters
     {
         ValidateIssuer = true,
         ValidateAudience = true,
         ValidateLifetime = true,
         ValidateIssuerSigningKey = true,
-        ValidIssuer = "YourIssuer",
-        ValidAudience = "YourIssuer",
+        ValidIssuer = builder.Configuration["Jwt:Issuer"], // استخدام الإعدادات من config
+        ValidAudience = builder.Configuration["Jwt:Audience"], // استخدام الإعدادات من config
         IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]))
     };
 });
+
+
+
 
 
 
@@ -78,7 +101,6 @@ builder.Services.AddScoped<IReviewsServices, ReviewsServices>();
 builder.Services.AddScoped<IJwtTokenService, JwtTokenService>();
 builder.Services.AddSingleton<IEmailSender, EmailSender>();
 
-
 builder.Services.AddAutoMapper(typeof(ProductProfile));
 builder.Services.AddAutoMapper(typeof(ImageProfile));
 builder.Services.AddAutoMapper(typeof(CartProfile));
@@ -89,36 +111,34 @@ builder.Services.AddAutoMapper(typeof(TeaDetailsProfile));
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-
-
-
-
-
-
+//builder.Services.AddCors(options =>
+//{
+//    options.AddPolicy("AllowLocalhost", builder =>
+//        builder.WithOrigins("http://localhost:4200")
+//               .AllowAnyHeader()
+//               .AllowAnyMethod());
+//});
 
 
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("AllowLocalhost", builder =>
-        builder.WithOrigins("http://localhost:4200")
-               .AllowAnyHeader()
-               .AllowAnyMethod());
+    options.AddPolicy("AllowAll", builder =>
+        builder.AllowAnyOrigin() // السماح لأي مصدر
+               .AllowAnyHeader() // السماح بأي ترويسة
+               .AllowAnyMethod()); // السماح بأي طريقة HTTP
 });
 
 
 var app = builder.Build();
 
-app.UseCors("AllowLocalhost");
+//app.UseCors("AllowLocalhost");
+app.UseCors("AllowAll");
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-
-
-
-
 
 app.UseStaticFiles(); 
 

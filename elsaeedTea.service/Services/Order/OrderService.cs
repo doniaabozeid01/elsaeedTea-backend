@@ -42,7 +42,8 @@ namespace elsaeedTea.service.Services.Order
                 PaymentMethod = orderDto.PaymentMethod,
                 TotalAmount = orderDto.TotalAmount,
                 Country = orderDto.Country,
-                Governorate = orderDto.Governorate,
+                city = orderDto.City,
+                Address = orderDto.Addrress,
                 PhoneNumber = orderDto.PhoneNumber,
                 CreatedAt = DateTime.Now,
                 Status = orderDto.Status,
@@ -142,6 +143,25 @@ namespace elsaeedTea.service.Services.Order
         {
             var orderRequests = await _unitOfWork.Repository<OrderRequest>().GetOrdersByUserId(id);
             var mappedOrder = _mapper.Map<IReadOnlyList<GetOrderRequest>>(orderRequests);
+            return mappedOrder;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+        public async Task<IReadOnlyList<GetOrderItems>> GetOrderItemsByOrderRequestId(string id)
+        {
+            var orderItems = await _unitOfWork.Repository<OrderItem>().GetOrderItemsByOrderRequestId(id);
+            var mappedOrder = _mapper.Map<IReadOnlyList<GetOrderItems>>(orderItems);
             return mappedOrder;
         }
 

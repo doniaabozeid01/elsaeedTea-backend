@@ -55,7 +55,8 @@ namespace elsaeedTea.Controllers
                     UserId = model.UserId,
                     PaymentMethod = model.PaymentMethod,
                     Country = model.Country,
-                    Governorate = model.Governorate,
+                    City = model.City,
+                    Addrress=model.Address,
                     PhoneNumber = model.PhoneNumber,
                     cartItems = mappedCartItems, // تمرير المنتجات من السلة
                     TotalAmount = cartItems.Sum(item => item.ProductDetails.Price * item.Quantity), // حساب الإجمالي
@@ -193,7 +194,7 @@ namespace elsaeedTea.Controllers
 
 
         // بترجع كل ال orders بتاعت ال user بس ال orders اللي هو طريقه الدفع و total amount , العنوان و الكلام دا ------> Order Request
-        [HttpGet("GetOrdersByUserId")]
+        [HttpGet("GetOrdersByUserId/{id}")]
         public async Task<ActionResult<GetOrderRequest>> GetOrdersByUserId(string id)
         {
             try
@@ -222,6 +223,30 @@ namespace elsaeedTea.Controllers
 
 
 
+
+        // بترجع كل ال orders بتاعت ال user بس ال orders اللي هو طريقه الدفع و total amount , العنوان و الكلام دا ------> Order Request
+        [HttpGet("GetOrderItemsByOrderRequestId/{id}")]
+        public async Task<ActionResult<GetOrderRequest>> GetOrderItemsByOrderRequestId(string id)
+        {
+            try
+            {
+                if (id == null)
+                {
+                    return BadRequest("Invalid id");
+                }
+                var orders = await _orderService.GetOrderItemsByOrderRequestId(id);
+                if (orders != null)
+                {
+                    return Ok(orders);
+                }
+                return NotFound("there are no orders");
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Internal server error: {ex.Message}");
+
+            }
+        }
 
 
 

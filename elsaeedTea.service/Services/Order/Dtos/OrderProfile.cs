@@ -18,6 +18,9 @@ namespace elsaeedTea.service.Services.Order.Dtos
 
             CreateMap<GetOrderRequest, OrderRequest>();
             CreateMap<OrderRequest, GetOrderRequest>();
+
+
+            CreateMap<OrderItem,GetOrderItems>().ReverseMap();
         }
     }
 }

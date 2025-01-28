@@ -37,5 +37,8 @@ namespace elsaeedTea.repository.Interfaces
 
         Task<IReadOnlyList<ElsaeedTeaProduct>> GetDetailsByProductIdAsync(int id);
 
+        Task<IReadOnlyList<OrderItem>> GetOrderItemsByOrderRequestId(string id);
+
+
     }
 }

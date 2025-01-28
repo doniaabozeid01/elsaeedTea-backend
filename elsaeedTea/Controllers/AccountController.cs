@@ -1,4 +1,5 @@
-﻿using System.Security.Claims;
+﻿using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
 using elsaeedTea.data.Entities;
 using elsaeedTea.service.Services.AuthenticationServices;
 using elsaeedTea.service.Services.AuthenticationServices.Dtos;
@@ -15,7 +16,6 @@ namespace elsaeedTea.Controllers
     [ApiController]
     public class AccountController : ControllerBase
     {
-
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly SignInManager<ApplicationUser> _signInManager;
         private readonly RoleManager<IdentityRole> _roleManager;
@@ -109,28 +109,88 @@ namespace elsaeedTea.Controllers
 
         }
 
-
-        [HttpGet("getUserId")]
         [Authorize]
-        public IActionResult GetUserIdFromToken()
+        [HttpGet("getUserId")]
+        public async Task<IActionResult> GetUserId()
         {
-            try
-            {
-                // استخراج userId مباشرة من Claims
-                var userId = User.FindFirst("sub")?.Value;
+            // الحصول على التوكن من الهيدر
+            var token = Request.Headers["Authorization"].ToString().Replace("Bearer ", "");
 
-                if (string.IsNullOrEmpty(userId))
-                {
-                    return Unauthorized("Invalid token or user not found.");
-                }
-
-                return Ok(new { UserId = userId });
-            }
-            catch (Exception ex)
+            if (string.IsNullOrEmpty(token))
             {
-                return BadRequest($"Error extracting userId from token: {ex.Message}");
+                return Unauthorized(new { Message = "Token is missing" });
             }
+
+            // فك تشفير التوكن لاستخراج الـ Claims
+            var handler = new JwtSecurityTokenHandler();
+            var jwtToken = handler.ReadJwtToken(token);
+
+            // استخراج الـ email من التوكن
+            var email = jwtToken?.Claims.FirstOrDefault(c => c.Type == "email")?.Value;
+
+            if (string.IsNullOrEmpty(email))
+            {
+                return Unauthorized(new { Message = "Email not found in token" });
+            }
+
+            // البحث عن المستخدم باستخدام الـ email
+            var user = await _userManager.FindByEmailAsync(email);
+
+            if (user == null)
+            {
+                return Unauthorized(new { Message = "User not found" });
+            }
+
+            return Ok(new { UserId = user.Id });
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        [Authorize]
+        [HttpGet("getFullName")]
+        public async Task<IActionResult> GetFullName()
+        {
+            // الحصول على التوكن من الهيدر
+            var token = Request.Headers["Authorization"].ToString().Replace("Bearer ", "");
+
+            if (string.IsNullOrEmpty(token))
+            {
+                return Unauthorized(new { Message = "Token is missing" });
+            }
+
+            // فك تشفير التوكن لاستخراج الـ Claims
+            var handler = new JwtSecurityTokenHandler();
+            var jwtToken = handler.ReadJwtToken(token);
+
+            // استخراج الـ FullName من التوكن
+            var fullName = jwtToken?.Claims.FirstOrDefault(c => c.Type == "FullName")?.Value;
+
+            if (string.IsNullOrEmpty(fullName))
+            {
+                return Unauthorized(new { Message = "FullName not found in token" });
+            }
+
+            return Ok(new { FullName = fullName });
+        }
+
+
+
+
+
+
+
+
 
         //احتمال كبير منستخدمهاش 
         //[HttpPost("adminRegister")]
@@ -209,6 +269,12 @@ namespace elsaeedTea.Controllers
 
 
 
+        [Authorize]
+        [HttpGet("secure-data")]
+        public IActionResult GetSecureData()
+        {
+            return Ok(new { message = "This is secured data" });
+        }
 
 
 
